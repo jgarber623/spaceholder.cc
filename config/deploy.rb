@@ -20,9 +20,8 @@ default_run_options[:shell] = '/bin/bash'
 
 namespace :deploy do
   %w[start stop restart].each do |command|
-    desc "#{command.capitalize} Puma server."
     task command do
-      run "sh #{shared_path}/puma_#{command}.sh"
+      # Sort this out…
     end
   end
 end
