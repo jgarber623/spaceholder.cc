@@ -29,7 +29,7 @@ You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For
 
 ## Acknowledgements
 
-Tip o' the hat to [@bradfrost](https://github.com/bradfrost) for [the inspiration](https://twitter.com/brad_frost/status/674668640915087360). All those amazing photos are sourced from [NASA on The Commons](https://www.flickr.com/photos/nasacommons/) and carry no known copyright restrictions.
+Tip o' the hat to [Brad Frost](https://twitter.com/brad_frost) for [the inspiration](https://twitter.com/brad_frost/status/674668640915087360) and [Alex Rehberg](https://twitter.com/alex_rehberg) for [the name](https://twitter.com/alex_rehberg/status/674668731272794112). All those amazing photos are sourced from [NASA on The Commons](https://www.flickr.com/photos/nasacommons/) and carry no known copyright restrictions.
 
 SpaceHolder is written and maintained by [@jgarber623](https://github.com/jgarber623).
 
