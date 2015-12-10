@@ -15,8 +15,4 @@ class Image
       c.crop "#{@dimensions}+0+0"
     end
   end
-
-  def render_to_blob
-    manipulate.to_blob
-  end
 end

@@ -11,7 +11,7 @@ class SpaceHolder < Sinatra::Base
 
     dimensions = height ? "#{width}#{height}" : "#{width}x#{width}"
 
-    Image.new(dimensions).render_to_blob
+    Image.new(dimensions).manipulate.to_blob
   end
 
   not_found do
