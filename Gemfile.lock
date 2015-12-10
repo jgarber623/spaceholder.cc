@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     bond (0.5.1)
+    mini_magick (4.3.6)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -32,6 +33,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mini_magick (~> 4.3)!
   shotgun (~> 0.9.1)!
   sinatra (~> 1.4)!
   tux (~> 0.3.0)!
