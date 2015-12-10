@@ -19,15 +19,10 @@ set :bundle_cmd, "chruby-exec #{ruby_version} -- bundle"
 default_run_options[:shell] = '/bin/bash'
 
 namespace :deploy do
-  task :restart do
-    run "sh #{shared_path}/puma_restart.sh"
-  end
-
-  task :start do
-    run "sh #{shared_path}/puma_start.sh"
-  end
-
-  task :stop do
-    run "sh #{shared_path}/puma_kill.sh"
+  %w[start stop restart].each do |command|
+    desc "#{command.capitalize} Puma server."
+    task command do
+      run "sh #{shared_path}/puma_#{command}.sh"
+    end
   end
 end
