@@ -4,6 +4,16 @@ A space-themed image placeholder service.
 
 ![](https://spaceholder.cc/1000x50)
 
+## Usage
+
+Jamming on a prototype? Cranking on buildout but you don't have content images from your client yet? Drop the following in your markup and marvel at the wonders of the universe:
+
+```html
+<img src="https://spaceholder.cc/400x300" alt="This is an awesome spaceholder!">
+```
+
+Replace `400x300` with whatever pixel dimensions you like: `200x50`, `1200x400`, `240x240`. You'll be traveling the outer reaches so long as the format is a number, an `x` (the letter "x"), and another number.
+
 ## Acknowledgements
 
 Tip o' the hat to [@bradfrost](https://github.com/bradfrost) for [the inspiration](https://twitter.com/brad_frost/status/674668640915087360). All those amazing photos are sourced from [Nasa on The Commons](https://www.flickr.com/photos/nasacommons/).
