@@ -1,6 +1,6 @@
 # SpaceHolder
 
-
+A space-themed image placeholder service.
 
 ## Acknowledgements
 

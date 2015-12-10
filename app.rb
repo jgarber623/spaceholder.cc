@@ -9,6 +9,10 @@ class SpaceHolder < Sinatra::Base
     content_type :jpg
     Image.new(dimensions).manipulate.to_blob
   end
+
+  not_found do
+    erb :'404'
+  end
 end
 
 Dir.glob('./app/**/*.rb', &method(:require))
