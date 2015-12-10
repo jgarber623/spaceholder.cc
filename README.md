@@ -2,9 +2,13 @@
 
 A space-themed image placeholder service.
 
+![](https://spaceholder.cc/1000x50)
+
 ## Acknowledgements
 
-Photos source from [Nasa on The Commons](https://www.flickr.com/photos/nasacommons/).
+Tip o' the hat to [@bradfrost](https://github.com/bradfrost) for [the inspiration](https://twitter.com/brad_frost/status/674668640915087360). All those amazing photos are sourced from [Nasa on The Commons](https://www.flickr.com/photos/nasacommons/).
+
+SpaceHolder is written and maintained by [@jgarber623](https://github.com/jgarber623).
 
 ## License
 
