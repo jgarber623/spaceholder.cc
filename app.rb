@@ -1,4 +1,5 @@
 class SpaceHolder < Sinatra::Base
+  set :server, :puma
   set :views, %{#{settings.root}/app/views}
 
   get '/' do

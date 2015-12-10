@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler'
+
 Bundler.require
 
 use Rack::Deflater
