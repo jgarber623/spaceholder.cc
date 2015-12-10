@@ -18,7 +18,7 @@ Replace `400x300` with whatever pixel dimensions you like: `200x50`, `1200x400`,
 
 ## Improving SpaceHolder
 
-You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For more on how you can help, check out [CONTRIBUTING.md](https://github.com/jgarber623/spaceholder.cc/blob/master/CONTRIBUTING.md)
+You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For more on how you can help, check out [CONTRIBUTING.md](https://github.com/jgarber623/spaceholder.cc/blob/master/CONTRIBUTING.md).
 
 
 ## Acknowledgements
