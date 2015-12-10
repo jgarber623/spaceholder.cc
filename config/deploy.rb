@@ -15,20 +15,19 @@ set :use_sudo, false
 
 set :ruby_version, '2.2.3'
 set :bundle_cmd, "chruby-exec #{ruby_version} -- bundle"
-set :pumactl_cmd, "#{bundle_cmd} exec pumactl -F config/puma.rb"
 
 default_run_options[:shell] = '/bin/bash'
 
 namespace :deploy do
   task :restart do
-    run "cd #{current_path} && #{pumactl_cmd} restart"
+    run "sh #{shared_path}/puma_restart.sh"
   end
 
   task :start do
-    run "cd #{current_path} && #{pumactl_cmd} start"
+    run "sh #{shared_path}/puma_start.sh"
   end
 
   task :stop do
-    run "cd #{current_path} && #{pumactl_cmd} stop"
+    run "sh #{shared_path}/puma_kill.sh"
   end
 end
