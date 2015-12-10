@@ -2,7 +2,22 @@ GEM
   remote: https://rubygems.org/
   specs:
     bond (0.5.1)
+    capistrano (2.15.6)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    highline (1.7.8)
     mini_magick (4.3.6)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (3.0.1)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
+    puma (2.15.3)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -33,7 +48,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano (~> 2.15)!
   mini_magick (~> 4.3)!
+  puma (~> 2.15)!
   shotgun (~> 0.9.1)!
   sinatra (~> 1.4)!
   tux (~> 0.3.0)!
