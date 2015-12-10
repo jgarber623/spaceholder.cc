@@ -10,9 +10,9 @@ class Image
     @image.combine_options do |c|
       c.interlace 'plane'
       c.quality 72
-      c.resize %{#{@dimensions}^}
+      c.resize "#{@dimensions}^"
       c.gravity 'center'
-      c.crop %{#{@dimensions}+0+0}
+      c.crop "#{@dimensions}+0+0"
     end
   end
 end

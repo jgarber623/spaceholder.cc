@@ -14,6 +14,6 @@ set :ssh_options, { forward_agent: true }
 set :use_sudo, false
 
 set :ruby_version, '2.2.3'
-set :bundle_cmd, %{chruby-exec #{ruby_version} -- bundle}
+set :bundle_cmd, "chruby-exec #{ruby_version} -- bundle"
 
 default_run_options[:shell] = '/bin/bash'
