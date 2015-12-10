@@ -15,6 +15,12 @@ Jamming on a prototype? Cranking on buildout but you don't have content images f
 
 Replace `400x300` with whatever pixel dimensions you like: `200x50`, `1200x400`, `240x240`. You'll be traveling the outer reaches so long as the format is a number, an `x` (the letter "x"), and another number.
 
+If you'd like a square image, use a single number in the URL:
+
+```html
+<img src="https://spaceholder.cc/400" alt="This is an awesome square spaceholder!">
+```
+
 
 ## Improving SpaceHolder
 

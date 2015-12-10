@@ -6,9 +6,12 @@ class SpaceHolder < Sinatra::Base
     erb :index
   end
 
-  get %r{^/(\d+x\d+)$} do |dimensions|
+  get %r{^/(\d+)(x\d+)?$} do |width, height|
     content_type :jpg
-    Image.new(dimensions).manipulate.to_blob
+
+    dimensions = height ? "#{width}#{height}" : "#{width}x#{width}"
+
+    Image.new(dimensions).render_to_blob
   end
 
   not_found do
