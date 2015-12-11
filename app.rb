@@ -6,7 +6,7 @@ class SpaceHolder < Sinatra::Base
     erb :index
   end
 
-  get %r{^/(\d+)(x\d+)?$} do |width, height|
+  get %r{^/((?:[1-4]?\d{1,3}|5000))(x(?:[1-4]?\d{1,3}|5000))?$} do |width, height|
     content_type :jpg
 
     dimensions = height ? "#{width}#{height}" : "#{width}x#{width}"
