@@ -7,11 +7,19 @@ class SpaceHolder < Sinatra::Base
   end
 
   get %r{^/(\d+)(x\d+)?$} do |width, height|
-    content_type :jpg
+    
+    if width <= 5000 and height <= 5000
+      
+      content_type :jpg
 
-    dimensions = height ? "#{width}#{height}" : "#{width}x#{width}"
-
-    Image.new(dimensions).manipulate.to_blob
+      dimensions = height ? "#{width}#{height}" : "#{width}x#{width}"
+  
+      Image.new(dimensions).manipulate.to_blob
+      
+    else
+     erb :index
+    end
+    
   end
 
   not_found do
