@@ -12,6 +12,7 @@ set :user, 'www-data'
 set :deploy_via, :remote_cache
 set :ssh_options, { forward_agent: true }
 set :use_sudo, false
+set :normalize_asset_timestamps, false
 
 set :ruby_version, '2.2.3'
 set :bundle_cmd, "chruby-exec #{ruby_version} -- bundle"
