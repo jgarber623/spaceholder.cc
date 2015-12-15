@@ -18,7 +18,7 @@ class SpaceHolder < Sinatra::Base
   end
 
   post '/' do
-    if params[:width] && params[:height]
+    if params[:width].length > 0 && params[:height].length > 0
       redirect %{/#{params[:width]}x#{params[:height]}}
     else
       erb :index
