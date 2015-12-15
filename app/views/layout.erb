@@ -18,7 +18,10 @@
 
 	<link rel="apple-touch-icon" href="<%= image_path 'spaceholder-180x180.png' %>">
 	<link rel="shortcut icon" href="<%= image_path 'spaceholder-180x180.png' %>">
-	<link rel="stylesheet" href="<%= stylesheet_path 'application' %>">
+
+	<style>
+		<%= assets_environment['application.css'] %>
+	</style>
 </head>
 <body>
 
