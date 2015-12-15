@@ -18,7 +18,13 @@ set :bundle_cmd, "chruby-exec #{ruby_version} -- bundle"
 
 default_run_options[:shell] = '/bin/bash'
 
+before 'deploy:create_symlink', 'deploy:precompile_assets'
+
 namespace :deploy do
+  task :precompile_assets do
+    run "cd #{release_path} && RACK_ENV=production #{bundle_cmd} exec rake assets:precompile"
+  end
+
   %w[start stop restart].each do |command|
     task command do
       # Sort this out…
