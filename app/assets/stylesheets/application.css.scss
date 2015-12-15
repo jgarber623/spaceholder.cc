@@ -5,28 +5,13 @@
 .header {
 	background: url("/800x400") no-repeat 50% 50%;
 	background-size: cover;
-	padding: 3em;
-}
-
-.logo-wrapper {
-	height: 0;
-	margin: 0 auto;
-	max-height: 6.25em;
-	max-width: 28em;
-	padding-bottom: 22.3214286%;
-	position: relative;
+	padding: 6.5em 3em;
 }
 
 .logo {
-	background: image-url("logo.svg") no-repeat 50% 50%;
-	background-size: contain;
 	font-size: 1em;
-	height: 100%;
-	left: 0;
-	margin: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
+	margin: 0 auto;
+	max-width: 28em;
 }
 
 .content {
