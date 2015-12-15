@@ -1,0 +1,150 @@
+@import "fonts";
+@import "elements";
+@import "classes";
+
+.header {
+	background: url("/800x400") no-repeat 50% 50%;
+	background-size: cover;
+	padding: 3em;
+}
+
+.logo-wrapper {
+	height: 0;
+	margin: 0 auto;
+	max-height: 6.25em;
+	max-width: 28em;
+	padding-bottom: 22.3214286%;
+	position: relative;
+}
+
+.logo {
+	background: image-url("logo.svg") no-repeat 50% 50%;
+	background-size: contain;
+	font-size: 1em;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.content {
+	margin: 0 auto;
+	max-width: 60em;
+	padding: 3em 1em;
+
+	h1,
+	h2 {
+		line-height: 1;
+		margin: 0;
+	}
+
+	h2 {
+		color: #e5e2d3;
+		margin: 2.5em 0 0.5em 0;
+	}
+
+	@media (min-width: 48em) {
+		h1 {
+			font-size: 4.5em;
+		}
+
+		h2 {
+			font-size: 3em;
+			margin-top: 1em;
+		}
+	}
+
+	em {
+		font-style: normal;
+		text-transform: uppercase;
+	}
+
+	pre {
+		font-size: 16px;
+		margin: 0;
+		padding: 1em;
+	}
+
+	code {
+		font-size: 1.25em;
+	}
+}
+
+.form {
+	margin: 3em 0;
+
+	label {
+		cursor: pointer;
+		display: block;
+		margin-bottom: 0.5em;
+	}
+
+	input {
+		border: 0;
+		border-radius: 0.25em;
+		color: #252c32;
+		font-size: 1.875em;
+		margin-bottom: 0.5em;
+		padding: 0.25em;
+		width: 100%;
+	}
+
+	button {
+		background: #e8e4d8;
+		background-image: linear-gradient(to bottom, #e8e4d8, #b9ae91);
+		border: 0;
+		border-radius: 0.5em;
+		color: #575343;
+		display: block;
+		font-weight: bold;
+		margin-top: 1em;
+		padding: 0.5em;
+		width: 100%;
+
+		span {
+			background: #d2ccb1;
+			border-radius: 0.25em;
+			display: block;
+			font-size: 1.875em;
+			padding: 0.25em 1em;
+		}
+	}
+}
+
+@media (min-width: 24em) {
+	.form-field {
+		float: left;
+		padding-right: 0.5em;
+		width: 50%;
+
+		+ .form-field {
+			float: right;
+			padding: 0 0 0 0.5em;
+		}
+	}
+
+	.form button {
+		clear: both;
+	}
+}
+
+.example {
+	background: rgba(#fff, 0.25);
+	border-radius: 0.25em;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+
+	&:focus,
+	&:hover {
+		background: rgba(#fff, 0.15);
+	}
+}
+
+.footer {
+	margin: 0 auto;
+	max-width: 60em;
+	padding: 0 1em 3em 1em;
+}

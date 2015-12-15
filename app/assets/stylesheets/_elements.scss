@@ -1,0 +1,104 @@
+@-ms-viewport{
+	width: device-width;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	background: #252c32;
+	box-sizing: border-box;
+	color: #fff;
+	font-family: Titillium, sans-serif;
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+/* @group HTML5 display definitions */
+
+	footer,
+	header,
+	main {
+		display: block;
+	}
+
+/* @end */
+
+/* @group Links */
+
+	a {
+		background: transparent;
+		color: #fff;
+		text-decoration: underline;
+	}
+
+/* @end */
+
+/* @group Text-level semantics */
+
+	h1 {
+		font-size: 2em;
+		margin: 0.67em 0;
+	}
+
+/* @end */
+
+/* @group Embedded content */
+
+	svg:not(:root) {
+		overflow: hidden;
+	}
+
+/* @end */
+
+/* @group Grouping content */
+
+	pre {
+		overflow: auto;
+	}
+
+	code {
+		font-family: Titillium, sans-serif;
+	}
+
+/* @end */
+
+/* @group Forms */
+
+	button,
+	input {
+		color: inherit;
+		font: inherit;
+		margin: 0;
+
+		&::-moz-focus-inner,
+		&::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	button {
+		-webkit-appearance: button;
+		cursor: pointer;
+		overflow: visible;
+		text-transform: none;
+
+		&[disabled] {
+			cursor: default;
+		}
+	}
+
+	input {
+		line-height: normal;
+	}
+
+/* @end */

@@ -2,6 +2,7 @@ ruby '2.2.3'
 
 source 'https://rubygems.org' do
   gem 'sinatra', '~> 1.4'
+  gem 'sinatra-asset-pipeline', '~> 0.7', require: 'sinatra/asset_pipeline'
   gem 'mini_magick', '~> 4.3'
   gem 'puma', '~> 2.15'
 

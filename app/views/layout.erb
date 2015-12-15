@@ -3,20 +3,38 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>SpaceHolder</title>
+	<title>SpaceHolder – A space-themed image placeholder service.</title>
+
+	<meta name="apple-mobile-web-app-title" content="SpaceHolder">
+	<meta name="application-name" content="SpaceHolder">
+	<meta name="description" content="You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@jgarber">
+	<meta property="og:description" content="You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.">
+	<meta property="og:image" content="<%= image_path 'spaceholder-180x180.png' %>">
+	<meta property="og:title" content="SpaceHolder – A space-themed image placeholder service.">
+
+	<link rel="apple-touch-icon" href="<%= image_path 'spaceholder-180x180.png' %>">
+	<link rel="shortcut icon" href="<%= image_path 'spaceholder-180x180.png' %>">
+	<link rel="stylesheet" href="<%= stylesheet_path 'application' %>">
 </head>
 <body>
 
-	<header role="banner">
-		<h1>SpaceHolder</h1>
-		<p>A space-themed image placeholder service.</p>
+	<header class="header" role="banner">
+		<div class="logo-wrapper">
+			<h1 class="logo">
+				<span class="ui-hidden">SpaceHolder</span>
+			</h1>
+		</div>
 	</header>
 
-	<main role="main">
+	<main class="content" role="main">
 		<%= yield %>
 	</main>
 
-	<footer role="contentinfo">
+	<footer class="footer" role="contentinfo">
 		<p>SpaceHolder is freely available under the <a href="http://opensource.org/licenses/MIT" rel="license">MIT License</a>. Source code is available on <a href="https://github.com/jgarber623/spaceholder.cc" rel="source">GitHub</a>.</p>
 	</footer>
 
