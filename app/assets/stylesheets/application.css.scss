@@ -96,6 +96,7 @@
 		background-image: linear-gradient(to bottom, #e8e4d8, #b9ae91);
 		border: 0;
 		border-radius: 0.5em;
+		clear: both;
 		color: #575343;
 		display: block;
 		font-weight: bold;
@@ -113,20 +114,14 @@
 	}
 }
 
-@media (min-width: 24em) {
-	.form-field {
-		float: left;
-		padding-right: 0.5em;
-		width: 50%;
+.form-field {
+	float: left;
+	padding-right: 0.5em;
+	width: 50%;
 
-		+ .form-field {
-			float: right;
-			padding: 0 0 0 0.5em;
-		}
-	}
-
-	.form button {
-		clear: both;
+	+ .form-field {
+		float: right;
+		padding: 0 0 0 0.5em;
 	}
 }
 
