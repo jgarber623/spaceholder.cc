@@ -25,9 +25,11 @@ namespace :deploy do
     run "cd #{release_path} && RACK_ENV=production #{bundle_cmd} exec rake assets:precompile"
   end
 
-  desc 'Restart the application'
-  task :restart do
-    run 'sudo /usr/sbin/service spaceholder-cc-puma restart'
+  %w{restart start stop}.each do |cmd|
+    desc "#{cmd.capitalize} the application."
+    task cmd do
+      run "sudo /usr/sbin/service spaceholder-cc-puma #{cmd}"
+    end
   end
 
   before :create_symlink, :precompile_assets
