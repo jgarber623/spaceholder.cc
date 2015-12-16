@@ -19,6 +19,8 @@ set :bundle_cmd, "chruby-exec #{ruby_version} -- bundle"
 
 default_run_options[:shell] = '/bin/bash'
 
+before 'deploy:create_symlink', 'deploy:precompile_assets'
+
 namespace :deploy do
   desc 'Precompile assets'
   task :precompile_assets do
@@ -31,6 +33,4 @@ namespace :deploy do
       run "sudo /usr/sbin/service spaceholder-cc-puma #{cmd}"
     end
   end
-
-  before :create_symlink, :precompile_assets
 end
