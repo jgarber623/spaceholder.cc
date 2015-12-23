@@ -25,7 +25,7 @@
 </head>
 <body>
 
-	<header class="header" role="banner">
+	<header class="header" id="header" role="banner">
 		<h1 class="logo">
 			<%= assets_environment['logo.svg'] %>
 		</h1>
@@ -38,6 +38,14 @@
 	<footer class="footer" role="contentinfo">
 		<p>SpaceHolder is freely available under the <a href="http://opensource.org/licenses/MIT" rel="license">MIT License</a>. Source code is available on <a href="https://github.com/jgarber623/spaceholder.cc" rel="source">GitHub</a>.</p>
 	</footer>
+
+	<script>
+		(function() {
+			window.onload = function() {
+				document.getElementById('header').style.backgroundImage = 'url("/800x400")';
+			};
+		})();
+	</script>
 
 </body>
 </html>
