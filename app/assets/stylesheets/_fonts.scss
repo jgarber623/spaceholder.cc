@@ -1,0 +1,16 @@
+@font-face {
+	font-family: Titillium;
+	font-style: normal;
+	font-weight: normal;
+	src: font-url("titillium-light.woff2") format("woff2"),
+		 font-url("titillium-light.woff") format("woff");
+}
+
+
+@font-face {
+	font-family: Titillium;
+	font-style: normal;
+	font-weight: bold;
+	src: font-url("titillium-black.woff2") format("woff2"),
+		 font-url("titillium-black.woff") format("woff");
+}
