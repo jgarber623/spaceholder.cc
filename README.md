@@ -37,7 +37,7 @@ Tip o' the hat to [Brad Frost](https://twitter.com/brad_frost) for [the inspirat
 
 All those amazing photos are sourced from [NASA on The Commons](https://www.flickr.com/photos/nasacommons/) and carry no known copyright restrictions.
 
-SpaceHolder is written and maintained by [@jgarber623](https://github.com/jgarber623).
+SpaceHolder is written and maintained by [Jason Garber](https://twitter.com/jgarber).
 
 
 ## License
