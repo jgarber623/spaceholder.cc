@@ -25,13 +25,13 @@ You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For
 
 ### Donations
 
-If diving into Ruby isn't your thing, but you'd still like to support SpaceHolder, consider making a donation! Any amount—large or small—is greatly appreciated. As a token of my gratitude, I'll add your name to the [Acknowledgements](#acknowledgements) below.
+If diving into Ruby isn't your thing, but you'd still like to support SpaceHolder, consider making a donation! Any amount—large or small—is greatly appreciated. As a token of my gratitude, I'll add your name to the [Acknowledgments](#acknowledgments) below.
 
 [![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg)](https://cash.me/$jgarber)
 [![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg)](https://www.paypal.me/jgarber)
 
 
-## Acknowledgements
+## Acknowledgments
 
 Tip o' the hat to [Brad Frost](https://twitter.com/brad_frost) for [the inspiration](https://twitter.com/brad_frost/status/674668640915087360) and [Alex Rehberg](https://twitter.com/alex_rehberg) for [the name](https://twitter.com/alex_rehberg/status/674668731272794112). Many thanks to [Ste Grainer](https://twitter.com/stegrainer) for SpaceHolder's logo and visual design.
 
