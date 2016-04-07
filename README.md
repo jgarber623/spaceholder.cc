@@ -1,6 +1,7 @@
-<img src="http://f.cl.ly/items/0j3z2w1c090a051s391L/logo.svg" alt="SpaceHolder" width="50%">
+<img src="http://f.cl.ly/items/452R3n1k2P3U140j1A20/logo.svg" alt="SpaceHolder" width="50%">
 
-#### A space-themed image placeholder service.
+**A space-themed image placeholder service.**
+
 
 ## Usage
 

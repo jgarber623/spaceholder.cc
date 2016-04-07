@@ -13,6 +13,30 @@
 	max-width: 28em;
 }
 
+.row {
+	margin: 1.5em 0 3em 0;
+
+	@media (min-width: 48em) {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+
+.col {
+	+ .col {
+		margin-top: 3em;
+	}
+
+	@media (min-width: 48em) {
+		width: 46%;
+
+		+ .col {
+			margin: 0;
+		}
+	}
+}
+
 .content {
 	margin: 0 auto;
 	max-width: 60em;
@@ -26,7 +50,7 @@
 
 	h2 {
 		color: #e5e2d3;
-		margin: 2.5em 0 0.5em 0;
+		margin-bottom: 0.5em;
 	}
 
 	@media (min-width: 48em) {
@@ -38,6 +62,11 @@
 			font-size: 3em;
 			margin-top: 1em;
 		}
+	}
+
+	p {
+		font-size: 1.25em;
+		margin: 0;
 	}
 
 	em {
@@ -57,8 +86,6 @@
 }
 
 .form {
-	margin: 3em 0;
-
 	label {
 		cursor: pointer;
 		display: block;
@@ -81,19 +108,26 @@
 		border: 0;
 		border-radius: 0.5em;
 		clear: both;
-		color: #575343;
+		color: #635f4d;
 		display: block;
+		font-size: 1.875em;
 		font-weight: bold;
 		margin-top: 1em;
-		padding: 0.5em;
+		padding: 0.25em;
 		width: 100%;
 
 		span {
 			background: #d2ccb1;
 			border-radius: 0.25em;
 			display: block;
-			font-size: 1.875em;
 			padding: 0.25em 1em;
+		}
+
+		&:focus,
+		&:hover {
+			background: #b9ae91;
+			background-image: linear-gradient(to bottom, #b9ae91, #e8e4d8);
+			color: #575343;
 		}
 	}
 }
