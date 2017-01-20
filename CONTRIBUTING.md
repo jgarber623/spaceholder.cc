@@ -9,7 +9,6 @@ I'd love to have your help improving SpaceHolder! If you'd like to pitch in, you
 
 I definitely appreciate your interest in (and help improving) SpaceHolder. Thanks!
 
-
 ## Installation
 
 SpaceHolder is written in [Ruby](https://www.ruby-lang.org/en/) (version 2.2.4) using [Sinatra](http://www.sinatrarb.com/). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
@@ -28,7 +27,6 @@ bundle exec shotgun
 
 This will fire up a server and you'll have the app running locally at `http://localhost:9393/`.
 
-
 ## Get set up to contribute
 
 Contributing to SpaceHolder is pretty straightforward:
@@ -41,13 +39,12 @@ Contributing to SpaceHolder is pretty straightforward:
 1. Push the branch to your fork of SpaceHolder: `git push origin your-descriptive-branch-name`.
 1. Create a new Pull Request and I'll give it a look!
 
-
 ## Code Style
 
 Code styles are like opinions: Everyone's got one and yours is better than mine. Here's how SpaceHolder should be written:
 
 - Use hard tabs for indentation in HTML, CSS, and JavaScript. Use two-space indentation in Ruby.
-- No trailing whitespace and blank lines should have whitespace removed.
+- Blank lines should have whitespace removed.
 - Prefer single quotes over double quotes unless interpolating.
 - Follow the conventions you see in the existing source code as best as you can.
 

@@ -2,7 +2,6 @@
 
 **A space-themed image placeholder service.**
 
-
 ## Usage
 
 Jamming on a prototype? Cranking on buildout but you don't have content images from your client yet? Drop the following in your markup and marvel at the wonders of the universe:
@@ -19,7 +18,6 @@ If you'd like a square image, use a single number in the URL:
 <img src="https://spaceholder.cc/400" alt="This is an awesome square spaceholder!">
 ```
 
-
 ## Improving SpaceHolder
 
 You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For more on how you can help, check out [CONTRIBUTING.md](https://github.com/jgarber623/spaceholder.cc/blob/master/CONTRIBUTING.md).
@@ -31,7 +29,6 @@ If diving into Ruby isn't your thing, but you'd still like to support SpaceHolde
 [![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg)](https://cash.me/$jgarber)
 [![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg)](https://www.paypal.me/jgarber)
 
-
 ## Acknowledgments
 
 Tip o' the hat to [Brad Frost](https://twitter.com/brad_frost) for [the inspiration](https://twitter.com/brad_frost/status/674668640915087360) and [Alex Rehberg](https://twitter.com/alex_rehberg) for [the name](https://twitter.com/alex_rehberg/status/674668731272794112). Many thanks to [Ste Grainer](https://twitter.com/stegrainer) for SpaceHolder's logo and visual design.
@@ -39,7 +36,6 @@ Tip o' the hat to [Brad Frost](https://twitter.com/brad_frost) for [the inspirat
 All those amazing photos are sourced from [NASA on The Commons](https://www.flickr.com/photos/nasacommons/) and carry no known copyright restrictions.
 
 SpaceHolder is written and maintained by [Jason Garber](https://twitter.com/jgarber).
-
 
 ## License
 
