@@ -11,7 +11,7 @@ set :user, 'www-data'
 
 set :deploy_via, :remote_cache
 set :normalize_asset_timestamps, false
-set :ssh_options, { forward_agent: true }
+set :ssh_options, forward_agent: true
 set :use_sudo, false
 
 set :ruby_version, '2.2.4'
@@ -27,7 +27,7 @@ namespace :deploy do
     run "cd #{release_path} && RACK_ENV=production #{bundle_cmd} exec rake assets:precompile"
   end
 
-  %w{restart start stop}.each do |cmd|
+  %w(restart start stop).each do |cmd|
     desc "#{cmd.capitalize} the application."
     task cmd do
       run "sudo /usr/sbin/service spaceholder-cc-puma #{cmd}"

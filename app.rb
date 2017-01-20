@@ -5,7 +5,7 @@ Bundler.require
 
 class SpaceHolder < Sinatra::Base
   set :server, :puma
-  set :protection, :except => [:frame_options, :xss_header]
+  set :protection, except: [:frame_options, :xss_header]
   set :views, "#{settings.root}/app/views"
 
   set :assets_css_compressor, :sass
@@ -19,8 +19,8 @@ class SpaceHolder < Sinatra::Base
   end
 
   post '/' do
-    if params[:width].length > 0 && params[:height].length > 0
-      redirect %{/#{params[:width]}x#{params[:height]}}
+    if params.key?(:width) && params.key?(:height)
+      redirect "/#{params[:width]}x#{params[:height]}"
     else
       erb :index
     end
