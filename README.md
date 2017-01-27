@@ -2,6 +2,8 @@
 
 **A space-themed image placeholder service.**
 
+[![Code Climate](https://codeclimate.com/github/jgarber623/spaceholder.cc/badges/gpa.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
+
 ## Usage
 
 Jamming on a prototype? Cranking on buildout but you don't have content images from your client yet? Drop the following in your markup and marvel at the wonders of the universe:
