@@ -1,5 +1,15 @@
-require './app'
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-use Rack::Deflater
+env = ENV['RACK_ENV'].to_sym
 
-run SpaceHolder.new
+require 'rubygems'
+require 'bundler'
+
+Bundler.require(:default, env)
+
+use Rack::Deflater if env == :production
+
+require 'spaceholder'
+
+run Spaceholder::App
