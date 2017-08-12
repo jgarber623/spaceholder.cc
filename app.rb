@@ -9,8 +9,8 @@ class SpaceHolder < Sinatra::Base
   set :views, "#{settings.root}/app/views"
 
   set :assets_css_compressor, :sass
-  set :assets_precompile, %w(application.css *.png *.svg *.woff *.woff2)
-  set :assets_prefix, %w(app/assets)
+  set :assets_precompile, %w[application.css *.png *.svg *.woff *.woff2]
+  set :assets_prefix, %w[app/assets]
 
   register Sinatra::AssetPipeline
 
