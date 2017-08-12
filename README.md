@@ -2,7 +2,9 @@
 
 **A space-themed image placeholder service.**
 
-[![Code Climate](https://codeclimate.com/github/jgarber623/spaceholder.cc/badges/gpa.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
+[![Code Climate GPA](https://codeclimate.com/github/jgarber623/spaceholder.cc/badges/gpa.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
+[![Code Climate Test Coverage](https://codeclimate.com/github/jgarber623/spaceholder.cc/badges/coverage.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc/coverage)
+[![Code Climate Issues](https://img.shields.io/codeclimate/issues/github/jgarber623/spaceholder.cc.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc/issues)
 
 ## Usage
 
