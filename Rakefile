@@ -11,4 +11,4 @@ Bundler.require(:default, env)
 require 'sinatra/asset_pipeline/task'
 require 'spaceholder'
 
-Sinatra::AssetPipeline::Task.define! Spaceholder
+Sinatra::AssetPipeline::Task.define! Spaceholder::App
