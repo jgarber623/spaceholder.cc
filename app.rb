@@ -35,4 +35,4 @@ class SpaceHolder < Sinatra::Base
   end
 end
 
-Dir.glob('./app/**/*.rb', &method(:require))
+Dir.glob(File.join(SpaceHolder.settings.root, 'lib', '*.rb'), &method(:require))
