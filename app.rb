@@ -26,12 +26,10 @@ class SpaceHolder < Sinatra::Base
     end
   end
 
-  get %r{^/((?:[1-4]?\d{1,3}|5000))(x(?:[1-4]?\d{1,3}|5000))?$} do |width, height|
+  get %r{^/([1-4]?\d{1,3}|5000)(?:x([1-4]?\d{1,3}|5000))?$} do |width, height|
     content_type :jpg
 
-    dimensions = height ? "#{width}#{height}" : "#{width}x#{width}"
-
-    Image.new(dimensions).manipulate.to_blob
+    Image.new(width, height).manipulate.to_blob
   end
 
   not_found do
