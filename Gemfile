@@ -8,6 +8,7 @@ source 'https://rubygems.org' do
 
   group :development do
     gem 'capistrano', '~> 2.15'
+    gem 'rake', '~> 10.5'
     gem 'rubocop', '~> 0.49.1', require: false
     gem 'shotgun', '~> 0.9.2'
     gem 'tux', '~> 0.3.0'
