@@ -1,5 +1,5 @@
 class Image
-  IMAGE_LIBRARY_PATH = File.join(SpaceHolder.settings.root, 'app', 'assets', 'images', 'photos', '*.jpg')
+  IMAGE_LIBRARY_PATH = File.join(SpaceHolder.settings.root, 'assets', 'images', 'photos', '*.jpg')
 
   def initialize(width, height)
     @width = width
