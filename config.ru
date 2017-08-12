@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 env = ENV['RACK_ENV'].to_sym
 
 require 'rubygems'
-require 'bundler'
+require 'bundler/setup'
 
 Bundler.require(:default, env)
 
