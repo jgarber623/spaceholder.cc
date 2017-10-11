@@ -15,7 +15,7 @@ module Spaceholder
     end
 
     post '/' do
-      if params.key?(:width) && params.key?(:height)
+      if params.key?('width') && params.key?('height')
         redirect "/#{params[:width]}x#{params[:height]}"
       else
         erb :index
