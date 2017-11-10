@@ -6,4 +6,4 @@ set :repo_url, 'git@example.com:jgarber623/spaceholder.cc.git'
 set :chruby_ruby, 'ruby-2.4.2'
 
 before 'deploy:publishing', 'assets:precompile'
-# after 'deploy:finished', 'puma:restart'
+after 'deploy:finished', 'puma:restart'
