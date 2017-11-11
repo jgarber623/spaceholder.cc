@@ -2,3 +2,4 @@
 .sass-cache/
 config/deploy/*.rb
 log/
+tmp/

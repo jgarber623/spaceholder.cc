@@ -1,6 +1,6 @@
 #!/usr/bin/env puma
 
-env = ENV['RACK_ENV'].to_sym
+pids_path = File.expand_path('../../tmp/pids', __FILE__)
 
 # The directory to operate out of.
 #
@@ -29,7 +29,7 @@ env = ENV['RACK_ENV'].to_sym
 #
 # The default is "development".
 #
-environment ENV.fetch('RACK_ENV') { 'development' }
+environment ENV.fetch('RACK_ENV') { 'production' }
 
 # Daemonize the server into the background. Highly suggest that
 # this be combined with "pidfile" and "stdout_redirect".
@@ -41,12 +41,12 @@ environment ENV.fetch('RACK_ENV') { 'development' }
 
 # Store the pid of the server in the file at "path".
 #
-pidfile '/var/www/spaceholder.cc/shared/pids/puma.pid' if env == :production
+pidfile File.join(pids_path, 'puma.pid')
 
 # Use "path" as the file to store the server info state. This is
 # used by "pumactl" to query and control the server.
 #
-state_path '/var/www/spaceholder.cc/shared/pids/puma.state' if env == :production
+state_path File.join(pids_path, 'puma.state')
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
 # ("append") specifies whether the output is appended, the default is
@@ -77,7 +77,7 @@ state_path '/var/www/spaceholder.cc/shared/pids/puma.state' if env == :productio
 # bind 'unix:///var/run/puma.sock'
 # bind 'unix:///var/run/puma.sock?umask=0111'
 # bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'
-bind 'unix:///var/www/spaceholder.cc/shared/pids/puma.sock' if env == :production
+bind "unix://#{File.join(pids_path, 'puma.sock')}"
 
 # Instead of "bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'" you
 # can also use the "ssl_bind" option.
@@ -201,4 +201,4 @@ bind 'unix:///var/www/spaceholder.cc/shared/pids/puma.sock' if env == :productio
 # activate_control_app 'unix:///var/run/pumactl.sock'
 # activate_control_app 'unix:///var/run/pumactl.sock', { auth_token: '12345' }
 # activate_control_app 'unix:///var/run/pumactl.sock', { no_token: true }
-activate_control_app 'unix:///var/www/spaceholder.cc/shared/pids/pumactl.sock' if env == :production
+activate_control_app "unix://#{File.join(pids_path, 'pumactl.sock')}"
