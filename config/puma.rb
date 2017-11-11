@@ -1,6 +1,6 @@
 #!/usr/bin/env puma
 
-pids_path = File.expand_path('../../tmp/pids', __FILE__)
+tmp_path = File.expand_path('../../tmp', __FILE__)
 
 # The directory to operate out of.
 #
@@ -41,12 +41,12 @@ environment ENV.fetch('RACK_ENV') { 'production' }
 
 # Store the pid of the server in the file at "path".
 #
-pidfile File.join(pids_path, 'puma.pid')
+pidfile File.join(tmp_path, 'pids', 'puma.pid')
 
 # Use "path" as the file to store the server info state. This is
 # used by "pumactl" to query and control the server.
 #
-state_path File.join(pids_path, 'puma.state')
+state_path File.join(tmp_path, 'pids', 'puma.state')
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
 # ("append") specifies whether the output is appended, the default is
@@ -77,7 +77,7 @@ state_path File.join(pids_path, 'puma.state')
 # bind 'unix:///var/run/puma.sock'
 # bind 'unix:///var/run/puma.sock?umask=0111'
 # bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'
-bind "unix://#{File.join(pids_path, 'puma.sock')}"
+bind "unix://#{File.join(tmp_path, 'sockets', 'puma.sock')}"
 
 # Instead of "bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'" you
 # can also use the "ssl_bind" option.
@@ -201,4 +201,4 @@ bind "unix://#{File.join(pids_path, 'puma.sock')}"
 # activate_control_app 'unix:///var/run/pumactl.sock'
 # activate_control_app 'unix:///var/run/pumactl.sock', { auth_token: '12345' }
 # activate_control_app 'unix:///var/run/pumactl.sock', { no_token: true }
-activate_control_app "unix://#{File.join(pids_path, 'pumactl.sock')}"
+activate_control_app "unix://#{File.join(tmp_path, 'sockets', 'pumactl.sock')}"
