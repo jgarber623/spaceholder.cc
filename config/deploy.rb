@@ -8,4 +8,4 @@ set :chruby_ruby, 'ruby-2.4.2'
 append :linked_dirs, 'tmp/pids'
 
 before 'deploy:publishing', 'assets:precompile'
-# after 'deploy:finished', 'puma:restart'
+after 'deploy:finished', 'puma:restart'
