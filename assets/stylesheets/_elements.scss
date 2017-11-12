@@ -1,28 +1,26 @@
-@-ms-viewport{
+@-ms-viewport {
   width: device-width;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 html {
-  background: #252c32;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #252c32;
   box-sizing: border-box;
   color: #fff;
   font-family: Titillium, sans-serif;
   line-height: 1.5;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
 }
-
-// HTML5 display definitions
 
 footer,
 header,
@@ -30,28 +28,20 @@ main {
   display: block;
 }
 
-// Links
-
 a {
   background: transparent;
   color: #fff;
   text-decoration: underline;
 }
 
-// Text-level semantics
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-// Embedded content
-
 svg:not(:root) {
   overflow: hidden;
 }
-
-// Grouping content
 
 pre {
   overflow: auto;
@@ -60,8 +50,6 @@ pre {
 code {
   font-family: Titillium, sans-serif;
 }
-
-// Forms
 
 button,
 input {
