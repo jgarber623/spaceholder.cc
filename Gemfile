@@ -13,6 +13,5 @@ source 'https://rubygems.org' do
     gem 'rake', '~> 10.5'
     gem 'rubocop', '~> 0.51.0', require: false
     gem 'shotgun', '~> 0.9.2'
-    gem 'tux', '~> 0.3.0'
   end
 end
