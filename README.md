@@ -2,8 +2,8 @@
 
 **A space-themed image placeholder service.**
 
-[![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/master.svg?label=build%20status)](https://travis-ci.org/jgarber623/spaceholder.cc)
-[![Known Vulnerabilities](https://snyk.io/test/github/jgarber623/spaceholder.cc/badge.svg)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
+[![Travis CI: Build Status](https://travis-ci.org/jgarber623/spaceholder.cc.svg?branch=master)](https://travis-ci.org/jgarber623/spaceholder.cc)
+[![Snyk: Known Vulnerabilities](https://snyk.io/test/github/jgarber623/spaceholder.cc/badge.svg)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
 ## Usage
 
