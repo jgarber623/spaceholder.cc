@@ -116,18 +116,18 @@
 		padding: 0.25em;
 		width: 100%;
 
-		span {
-			background: #d2ccb1;
-			border-radius: 0.25em;
-			display: block;
-			padding: 0.25em 1em;
-		}
-
 		&:focus,
 		&:hover {
 			background: #b9ae91;
 			background-image: linear-gradient(to bottom, #b9ae91, #e8e4d8);
 			color: #575343;
+		}
+
+		span {
+			background: #d2ccb1;
+			border-radius: 0.25em;
+			display: block;
+			padding: 0.25em 1em;
 		}
 	}
 }

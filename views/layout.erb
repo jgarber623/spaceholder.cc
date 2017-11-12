@@ -1,51 +1,51 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<title>SpaceHolder – A space-themed image placeholder service.</title>
+  <title>SpaceHolder – A space-themed image placeholder service.</title>
 
-	<meta name="apple-mobile-web-app-title" content="SpaceHolder">
-	<meta name="application-name" content="SpaceHolder">
-	<meta name="description" content="You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-title" content="SpaceHolder">
+  <meta name="application-name" content="SpaceHolder">
+  <meta name="description" content="You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@jgarber">
-	<meta property="og:description" content="You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.">
-	<meta property="og:image" content="<%= image_path 'spaceholder-180x180.png' %>">
-	<meta property="og:title" content="SpaceHolder – A space-themed image placeholder service.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jgarber">
+  <meta property="og:description" content="You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.">
+  <meta property="og:image" content="<%= image_path 'spaceholder-180x180.png' %>">
+  <meta property="og:title" content="SpaceHolder – A space-themed image placeholder service.">
 
-	<link rel="apple-touch-icon" href="<%= image_path 'spaceholder-180x180.png' %>">
-	<link rel="shortcut icon" href="<%= image_path 'spaceholder-180x180.png' %>">
+  <link rel="apple-touch-icon" href="<%= image_path 'spaceholder-180x180.png' %>">
+  <link rel="shortcut icon" href="<%= image_path 'spaceholder-180x180.png' %>">
 
-	<style>
-		<%= assets_environment['application.css'] %>
-	</style>
+  <style>
+    <%= assets_environment['application.css'] %>
+  </style>
 </head>
 <body>
 
-	<header class="header" id="header" role="banner">
-		<h1 class="logo">
-			<%= assets_environment['logo.svg'] %>
-		</h1>
-	</header>
+  <header class="header" id="header" role="banner">
+    <h1 class="logo">
+      <%= assets_environment['logo.svg'] %>
+    </h1>
+  </header>
 
-	<main class="content" role="main">
-		<%= yield %>
-	</main>
+  <main class="content" role="main">
+    <%= yield %>
+  </main>
 
-	<footer class="footer" role="contentinfo">
-		<p>SpaceHolder is freely available under the <a href="http://opensource.org/licenses/MIT" rel="license">MIT License</a>. Source code is available on <a href="https://github.com/jgarber623/spaceholder.cc" rel="source">GitHub</a>.</p>
-	</footer>
+  <footer class="footer" role="contentinfo">
+    <p>SpaceHolder is freely available under the <a href="http://opensource.org/licenses/MIT" rel="license">MIT License</a>. Source code is available on <a href="https://github.com/jgarber623/spaceholder.cc" rel="source">GitHub</a>.</p>
+  </footer>
 
-	<script>
-		(function() {
-			window.onload = function() {
-				document.getElementById('header').style.backgroundImage = 'url("/800x400")';
-			};
-		})();
-	</script>
+  <script>
+    (function() {
+      window.onload = function() {
+        document.getElementById('header').style.backgroundImage = 'url("/800x400")';
+      };
+    })();
+  </script>
 
 </body>
 </html>
