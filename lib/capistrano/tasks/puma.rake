@@ -1,5 +1,5 @@
 namespace :puma do
-  %w[start stop restart status].each do |cmd|
+  %w[start stop restart].each do |cmd|
     desc "#{cmd.capitalize} the application server"
     task cmd do
       on roles(:all) do
