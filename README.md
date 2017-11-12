@@ -3,9 +3,6 @@
 **A space-themed image placeholder service.**
 
 [![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/master.svg?label=build%20status)](https://travis-ci.org/jgarber623/spaceholder.cc)
-[![Code Climate GPA](https://img.shields.io/codeclimate/github/jgarber623/spaceholder.cc.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
-[![Code Climate Coverage](https://img.shields.io/codeclimate/coverage/github/jgarber623/spaceholder.cc.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc/coverage)
-[![Code Climate Issues](https://img.shields.io/codeclimate/issues/github/jgarber623/spaceholder.cc.svg)](https://codeclimate.com/github/jgarber623/spaceholder.cc/issues)
 [![Known Vulnerabilities](https://snyk.io/test/github/jgarber623/spaceholder.cc/badge.svg)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
 ## Usage
