@@ -1,0 +1,15 @@
+files:
+  include: 'assets/stylesheets/*.scss'
+rules:
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  leading-zero:
+    - 2
+    - include: true
+  no-color-literals: 0
+  no-vendor-prefixes: 0
+  quotes:
+    - 2
+    - style: double
+  shorthand-values: 0
