@@ -1,5 +1,7 @@
 module Spaceholder
   class App < Sinatra::Base
+    DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/
+
     set :root, File.dirname(File.expand_path('../..', __FILE__))
 
     set :server, :puma
@@ -15,21 +17,33 @@ module Spaceholder
     end
 
     post '/' do
-      if params.key?('width') && params.key?('height')
-        redirect "/#{params[:width]}x#{params[:height]}"
-      else
-        erb :index
-      end
+      return erb :index unless params.key?('width') && params.key?('height')
+
+      redirect "/#{params[:width]}x#{params[:height]}"
     end
 
-    get %r{^/([1-4]?\d{1,3}|5000)(?:x([1-4]?\d{1,3}|5000))?$} do |width, height|
-      content_type :jpg
+    get %r{^/#{DIMENSIONS_REGEXP}$} do |width|
+      return redirect '/' unless width.to_i.positive?
 
-      Image.new(width, height).manipulate.to_blob
+      render_image(width, width)
+    end
+
+    get %r{^/#{DIMENSIONS_REGEXP}x#{DIMENSIONS_REGEXP}$} do |width, height|
+      return redirect '/' unless width.to_i.positive? && height.to_i.positive?
+
+      render_image(width, height)
     end
 
     not_found do
       erb :'404'
+    end
+
+    private
+
+    def render_image(width, height)
+      content_type :jpg
+
+      Image.new(width, height).manipulate.to_blob
     end
   end
 end

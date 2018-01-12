@@ -23,7 +23,11 @@ module Spaceholder
     end
 
     def image
-      @image ||= MiniMagick::Image.open(Dir.glob(Library.image_paths).sample)
+      @image ||= MiniMagick::Image.open(image_paths.sample)
+    end
+
+    def image_paths
+      @image_paths ||= Dir.glob(File.join(App.settings.root, 'assets', 'images', 'photos', '*.jpg'))
     end
   end
 end
