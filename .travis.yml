@@ -1,10 +1,7 @@
 dist: trusty
 sudo: false
 language: ruby
-cache:
-  bundler: true
-  directories:
-    - node_modules
+cache: bundler
 rvm:
   - 2.4.2
 before_install:
