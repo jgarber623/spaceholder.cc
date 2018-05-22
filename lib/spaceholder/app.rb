@@ -8,6 +8,7 @@ module Spaceholder
     set :protection, except: [:frame_options, :xss_header]
 
     set :assets_css_compressor, :sass
+    set :assets_paths, %w(assets/fonts assets/images assets/stylesheets)
     set :assets_precompile, %w[application.css *.png *.svg *.woff *.woff2]
 
     register Sinatra::AssetPipeline
@@ -22,13 +23,13 @@ module Spaceholder
       redirect "/#{params[:width]}x#{params[:height]}"
     end
 
-    get %r{^/#{DIMENSIONS_REGEXP}$} do |width|
+    get %r{/#{DIMENSIONS_REGEXP}} do |width|
       return redirect '/' unless width.to_i.positive?
 
       render_image(width, width)
     end
 
-    get %r{^/#{DIMENSIONS_REGEXP}x#{DIMENSIONS_REGEXP}$} do |width, height|
+    get %r{/#{DIMENSIONS_REGEXP}x#{DIMENSIONS_REGEXP}} do |width, height|
       return redirect '/' unless width.to_i.positive? && height.to_i.positive?
 
       render_image(width, height)
