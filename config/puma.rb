@@ -1,6 +1,6 @@
 #!/usr/bin/env puma
 
-tmp_path = File.expand_path('../../tmp', __FILE__)
+tmp_path = File.expand_path('../tmp', __dir__)
 
 # The directory to operate out of.
 #

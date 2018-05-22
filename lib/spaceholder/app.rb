@@ -2,7 +2,7 @@ module Spaceholder
   class App < Sinatra::Base
     DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/
 
-    set :root, File.dirname(File.expand_path('../..', __FILE__))
+    set :root, File.dirname(File.expand_path('..', __dir__))
 
     set :server, :puma
     set :protection, except: [:frame_options, :xss_header]
