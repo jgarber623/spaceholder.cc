@@ -8,7 +8,7 @@ module Spaceholder
     set :protection, except: [:frame_options, :xss_header]
 
     set :assets_css_compressor, :sass
-    set :assets_paths, %w(assets/fonts assets/images assets/stylesheets)
+    set :assets_paths, %w[assets/fonts assets/images assets/stylesheets]
     set :assets_precompile, %w[application.css *.png *.svg *.woff *.woff2]
 
     register Sinatra::AssetPipeline
