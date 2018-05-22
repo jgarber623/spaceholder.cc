@@ -22,7 +22,7 @@ bundle install
 …from the root of the project. To start the app locally in development mode, run:
 
 ```sh
-bundle exec shotgun
+bin/shotgun
 ```
 
 This will fire up a server and you'll have the app running locally at `http://localhost:9393/`.
