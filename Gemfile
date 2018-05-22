@@ -3,7 +3,7 @@ ruby '2.5.1'
 source 'https://rubygems.org'
 
 gem 'mini_magick', '~> 4.8'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.11', '>= 3.11.4'
 gem 'sinatra', '~> 1.4', '>= 1.4.8'
 gem 'sinatra-asset-pipeline', '~> 0.7.0', require: 'sinatra/asset_pipeline'
 
