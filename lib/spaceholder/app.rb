@@ -3,9 +3,7 @@ module Spaceholder
     DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/
 
     set :root, File.dirname(File.expand_path('..', __dir__))
-
     set :server, :puma
-    set :protection, except: [:frame_options, :xss_header]
 
     set :assets_css_compressor, :sass
     set :assets_paths, %w[assets/fonts assets/images assets/stylesheets]

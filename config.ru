@@ -9,6 +9,7 @@ require 'bundler/setup'
 Bundler.require(:default, env)
 
 use Rack::Deflater if env == :production
+use Rack::Protection::ContentSecurityPolicy, default_src: "'self'", script_src: "'self' 'unsafe-inline'", style_src: "'self' 'unsafe-inline'", frame_ancestors: "'none'"
 
 require 'spaceholder'
 
