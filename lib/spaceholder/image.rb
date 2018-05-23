@@ -5,25 +5,30 @@ module Spaceholder
       @height = (height || width).to_i
     end
 
-    def process
-      image.apply(
+    def to_blob
+      data = processed_image.read
+
+      processed_image.close
+      processed_image.unlink
+
+      data
+    end
+
+    private
+
+    def image_paths
+      @image_paths ||= Dir.glob(File.join(App.settings.root, 'assets', 'images', 'photos', '*.jpg'))
+    end
+
+    def processed_image
+      ImageProcessing::Vips.apply(
         resize_to_fill: [@width, @height],
         saver: {
           interlace: true,
           quality: 60,
           strip: true
         }
-      ).call(save: false).write_to_buffer('.jpg')
-    end
-
-    private
-
-    def image
-      @image ||= ImageProcessing::Vips.source(image_paths.sample)
-    end
-
-    def image_paths
-      @image_paths ||= Dir.glob(File.join(App.settings.root, 'assets', 'images', 'photos', '*.jpg'))
+      ).call(image_paths.sample)
     end
   end
 end
