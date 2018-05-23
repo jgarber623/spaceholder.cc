@@ -44,7 +44,7 @@ module Spaceholder
     def render_image(width, height)
       content_type :jpg
 
-      Image.new(width, height).manipulate.to_blob
+      Image.new(width, height).process
     end
   end
 end

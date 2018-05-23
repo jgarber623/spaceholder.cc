@@ -1,29 +1,25 @@
 module Spaceholder
   class Image
     def initialize(width, height)
-      @width = width
-      @height = height || width
+      @width = width.to_i
+      @height = (height || width).to_i
     end
 
-    def manipulate
-      image.combine_options do |c|
-        c.strip
-        c.interlace 'plane'
-        c.quality 60
-        c.resize "#{dimensions}^"
-        c.gravity 'center'
-        c.crop "#{dimensions}+0+0"
-      end
+    def process
+      image.apply(
+        resize_to_fill: [@width, @height],
+        saver: {
+          interlace: true,
+          quality: 60,
+          strip: true
+        }
+      ).call(save: false).write_to_buffer('.jpg')
     end
 
     private
 
-    def dimensions
-      @dimensions ||= "#{@width}x#{@height}"
-    end
-
     def image
-      @image ||= MiniMagick::Image.open(image_paths.sample)
+      @image ||= ImageProcessing::Vips.source(image_paths.sample)
     end
 
     def image_paths
