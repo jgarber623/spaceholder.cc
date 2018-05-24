@@ -14,6 +14,8 @@ module Spaceholder
     register Sinatra::AssetPipeline
 
     get '/' do
+      cache_control :public
+
       erb :index
     end
 
@@ -36,6 +38,8 @@ module Spaceholder
     end
 
     not_found do
+      cache_control :public
+
       erb :'404'
     end
 
@@ -43,6 +47,8 @@ module Spaceholder
 
     def render_image(width, height)
       content_type :jpg
+
+      cache_control :public, max_age: 3600
 
       headers 'X-Content-Type-Options' => 'nosniff'
 
