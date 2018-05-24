@@ -7,10 +7,10 @@ module Spaceholder
 
     def to_blob
       tempfile = ImageProcessing::MiniMagick
-        .source(image_paths.sample)
-        .resize_to_fill(@width, @height)
-        .saver(output_options)
-        .call
+                 .source(image_paths.sample)
+                 .resize_to_fill(@width, @height)
+                 .saver(output_options)
+                 .call
 
       blob = tempfile.read
 
