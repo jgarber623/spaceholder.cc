@@ -6,11 +6,18 @@ module Spaceholder
     end
 
     def to_blob
-      ImageProcessing::Vips
+      tempfile = ImageProcessing::MiniMagick
         .source(image_paths.sample)
         .resize_to_fill(@width, @height)
-        .call(save: false)
-        .write_to_buffer('.jpg', output_options)
+        .saver(output_options)
+        .call
+
+      blob = tempfile.read
+
+      tempfile.close
+      tempfile.unlink
+
+      blob
     end
 
     private
@@ -21,8 +28,8 @@ module Spaceholder
 
     def output_options
       @output_options ||= {
-        interlace: true,
-        Q: 60,
+        interlace: 'Line',
+        quality: 60,
         strip: true
       }
     end
