@@ -6,20 +6,25 @@ module Spaceholder
     end
 
     def to_blob
-      ImageProcessing::Vips.apply(
-        resize_to_fill: [@width, @height],
-        saver: {
-          interlace: true,
-          quality: 60,
-          strip: true
-        }
-      ).call(image_paths.sample, save: false).write_to_buffer('.jpg')
+      ImageProcessing::Vips
+        .source(image_paths.sample)
+        .resize_to_fill(@width, @height)
+        .call(save: false)
+        .write_to_buffer('.jpg', output_options)
     end
 
     private
 
     def image_paths
       @image_paths ||= Dir.glob(File.join(App.settings.root, 'assets', 'images', 'photos', '*.jpg'))
+    end
+
+    def output_options
+      @output_options ||= {
+        interlace: true,
+        Q: 60,
+        strip: true
+      }
     end
   end
 end
