@@ -3,6 +3,8 @@ module Spaceholder
     DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/
 
     set :root, File.dirname(File.expand_path('..', __dir__))
+
+    set :protection, except: [:xss_header]
     set :server, :puma
 
     set :assets_css_compressor, :sass
@@ -41,6 +43,8 @@ module Spaceholder
 
     def render_image(width, height)
       content_type :jpg
+
+      headers 'X-Content-Type-Options' => 'nosniff'
 
       Image.new(width, height).to_blob
     end
