@@ -25,40 +25,28 @@ module Spaceholder
       redirect "/#{params[:width]}x#{params[:height]}"
     end
 
-    get %r{/#{DIMENSIONS_REGEXP}} do |width|
+    get %r{/#{DIMENSIONS_REGEXP}(?:x#{DIMENSIONS_REGEXP})?} do |width, height|
       return redirect '/' unless width.to_i.positive?
+      return redirect '/' if height && height.to_i.negative?
 
-      render_image(width, width)
-    end
-
-    get %r{/#{DIMENSIONS_REGEXP}x#{DIMENSIONS_REGEXP}} do |width, height|
-      return redirect '/' unless width.to_i.positive? && height.to_i.positive?
-
-      render_image(width, height)
-    end
-
-    not_found do
-      cache_control :public
-
-      erb :'404'
-    end
-
-    private
-
-    def render_image(width, height)
       content_type :jpg
 
       cache_control :public, max_age: 3600
 
       headers 'X-Content-Type-Options' => 'nosniff'
 
-      tempfile = Image.new(width, height).manipulate
-
       begin
+        tempfile = Image.new(width, height).manipulate
         tempfile.read
       ensure
         tempfile.close!
       end
+    end
+
+    not_found do
+      cache_control :public
+
+      erb :'404'
     end
   end
 end
