@@ -27,7 +27,7 @@ module Spaceholder
 
     get %r{/#{DIMENSIONS_REGEXP}(?:x#{DIMENSIONS_REGEXP})?} do |width, height|
       return redirect '/' unless width.to_i.positive?
-      return redirect '/' if height && height.to_i.negative?
+      return redirect '/' if height && height.to_i <= 0
 
       content_type :jpg
 
