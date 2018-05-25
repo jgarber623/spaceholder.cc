@@ -52,7 +52,13 @@ module Spaceholder
 
       headers 'X-Content-Type-Options' => 'nosniff'
 
-      Image.new(width, height).to_blob
+      tempfile = Image.new(width, height).manipulate
+
+      begin
+        tempfile.read
+      ensure
+        tempfile.close!
+      end
     end
   end
 end
