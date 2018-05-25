@@ -11,18 +11,23 @@ I definitely appreciate your interest in (and help improving) SpaceHolder. Thank
 
 ## Installation
 
-SpaceHolder is written in [Ruby](https://www.ruby-lang.org/en/) (version 2.5.1) using [Sinatra](http://www.sinatrarb.com/). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
-
-I manage Ruby versions with [rbenv](https://github.com/rbenv/rbenv). I'd recommend you do the same or use a similar Ruby version manager ([chruby](https://github.com/postmodern/chruby/) or [RVM](https://rvm.io/) come to mind). Once you've installed Ruby 2.2.3 using your method of choice, install the project's gems by running:
+SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 2.5.1) and uses the [Bundler](http://bundler.io) gem to manage Ruby dependencies. SpaceHolder also relies on the [ImageMagick](https://www.imagemagick.org) image processing library to dynamically resize images based on the request URL. If you're using macOS, ImageMagick is most easily installed using [Homebrew])(https://brew.sh):
 
 ```sh
+brew install imagemagick
+```
+
+Using your installation method of choice, install Ruby 2.5.1. I manage Ruby versions with [rbenv](https://github.com/rbenv/rbenv), but you may also consider using [chruby](https://github.com/postmodern/chruby) or [RVM](https://rvm.io). Once you've installed Ruby 2.5.1 using your method of choice, install Bundler and the project's gems by running:
+
+```sh
+gem install bundler
 bundle install
 ```
 
-…from the root of the project. To start the app locally in development mode, run:
+To start the app locally in development mode, run:
 
 ```sh
-bin/shotgun
+bin/shotgun --host 0.0.0.0
 ```
 
 This will fire up a server and you'll have the app running locally at `http://localhost:9393/`.
@@ -43,11 +48,11 @@ Contributing to SpaceHolder is pretty straightforward:
 
 Code styles are like opinions: Everyone's got one and yours is better than mine. Here's how SpaceHolder should be written:
 
-- Use hard tabs for indentation in HTML, CSS, and JavaScript. Use two-space indentation in Ruby.
-- Blank lines should have whitespace removed.
+- Use two spaces for indentation.
+- No trailing whitespace and blank lines should have whitespace removed.
 - Prefer single quotes over double quotes unless interpolating.
 - Follow the conventions you see in the existing source code as best as you can.
 
-SpaceHolder's formatting guidelines are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org/) syntax. There are [a number of great plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. Using EditorConfig will make your time spent coding a little bit easier.
+SpaceHolder's formatting guidelines are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org) syntax. There are [a number of great plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. Using EditorConfig will make your time spent coding a little bit easier.
 
 Your bug fix or feature addition won't be rejected if it runs afoul of any (or all) of these guidelines, but following the guidelines will definitely make everyone's lives a little easier.
