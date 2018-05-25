@@ -9,30 +9,23 @@ I'd love to have your help improving SpaceHolder! If you'd like to pitch in, you
 
 I definitely appreciate your interest in (and help improving) SpaceHolder. Thanks!
 
-## Setup
+## Installation
 
-SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 2.5.1) and uses the [Bundler](http://bundler.io) gem to manage dependencies. SpaceHolder uses the [libvips](https://github.com/jcupitt/libvips) image processing library to dynamically resize images based on the request URL. Interaction with this library is handled by the [ruby-vips](https://github.com/jcupitt/ruby-vips) binding and the [image_processing](https://github.com/janko-m/image_processing) gem.
+SpaceHolder is written in [Ruby](https://www.ruby-lang.org/en/) (version 2.5.1) using [Sinatra](http://www.sinatrarb.com/). Development dependencies are managed using the [Bundler](http://bundler.io/) gem.
 
-### Installing development dependencies
+I manage Ruby versions with [rbenv](https://github.com/rbenv/rbenv). I'd recommend you do the same or use a similar Ruby version manager ([chruby](https://github.com/postmodern/chruby/) or [RVM](https://rvm.io/) come to mind). Once you've installed Ruby 2.2.3 using your method of choice, install the project's gems by running:
 
-If you're comfortable compiling libvips and its dependencies by hand and/or if you have luck using the [Homebrew-supplied vips Formula](https://github.com/Homebrew/homebrew-core/blob/master/Formula/vips.rb), you may be able to get SpaceHolder running locally by:
+```sh
+bundle install
+```
 
-1. Installing Ruby 2.5.1 using your method of choice (e.g. [rbenv](https://github.com/rbenv/rbenv), [chruby](https://github.com/postmodern/chruby), [RVM](https://rvm.io))
-1. Installing Bundler: `gem install bundler`
-1. Running `bundle install`,
-1. Starting the application with `bin/shotgun --host 0.0.0.0`, and
-1. Navigating to `http://localhost:9393` in your Web browser of choice.
+…from the root of the project. To start the app locally in development mode, run:
 
-**Alternatively**, you can build and run a [Docker](https://www.docker.com) container with all the necessary dependencies already configured and installed:
+```sh
+bin/shotgun
+```
 
-1. Install Docker using the most appropriate method for your system (e.g. [Docker for Mac](https://www.docker.com/docker-mac)),
-1. Run Docker (which can be done by opening Docker for Mac),
-1. Open your Terminal application and `cd /path/to/spaceholder.cc`, and
-1. Run `make build` from the root of the project.
-
-The `make build` command (specified in [`Makefile`](https://github.com/jgarber623/spaceholder.cc/blob/master/Makefile)) will pull the appropriate Ruby image from [Docker Hub](https://hub.docker.com) and build the `spaceholder.cc` image using the instructions in [`Dockerfile`](https://github.com/jgarber623/spaceholder.cc/blob/master/Dockerfile). The build may take some time, so be patient, go for a walk, or grab a beverage. Once complete, run `make run` to start up the application. You may then navigate to `http://localhost:9393` using your Web browser of choice.
-
-Most changes to files in `/path/to/spaceholder.cc` will be reflected in the running application. Changes to application dependencies (e.g. adding, removing, or updating gems) will likely require rebuilding the `spaceholder.cc` Docker image using `make build`.
+This will fire up a server and you'll have the app running locally at `http://localhost:9393/`.
 
 ## Get set up to contribute
 
@@ -50,11 +43,11 @@ Contributing to SpaceHolder is pretty straightforward:
 
 Code styles are like opinions: Everyone's got one and yours is better than mine. Here's how SpaceHolder should be written:
 
-- Use two spaces for indentation.
-- No trailing whitespace and blank lines should have whitespace removed.
+- Use hard tabs for indentation in HTML, CSS, and JavaScript. Use two-space indentation in Ruby.
+- Blank lines should have whitespace removed.
 - Prefer single quotes over double quotes unless interpolating.
 - Follow the conventions you see in the existing source code as best as you can.
 
-SpaceHolder's formatting guidelines are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org) syntax. There are [a number of great plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. Using EditorConfig will make your time spent coding a little bit easier.
+SpaceHolder's formatting guidelines are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org/) syntax. There are [a number of great plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. Using EditorConfig will make your time spent coding a little bit easier.
 
 Your bug fix or feature addition won't be rejected if it runs afoul of any (or all) of these guidelines, but following the guidelines will definitely make everyone's lives a little easier.
