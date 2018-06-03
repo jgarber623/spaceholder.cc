@@ -8,7 +8,7 @@ gem 'sinatra', '~> 2.0', '>= 2.0.1'
 gem 'sinatra-asset-pipeline', '~> 2.0', '>= 2.0.1', require: 'sinatra/asset_pipeline'
 
 group :development do
-  gem 'capistrano', '~> 3.10', '>= 3.10.2'
+  gem 'capistrano', '~> 3.11'
   gem 'capistrano-bundler', '~> 1.3'
   gem 'capistrano-chruby', '~> 0.1.2'
   gem 'rake', '~> 12.3', '>= 12.3.1'
