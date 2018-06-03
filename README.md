@@ -2,8 +2,9 @@
 
 **A space-themed image placeholder service.**
 
-[![Travis CI: Build Status](https://travis-ci.org/jgarber623/spaceholder.cc.svg?branch=master)](https://travis-ci.org/jgarber623/spaceholder.cc)
-[![Snyk: Known Vulnerabilities](https://snyk.io/test/github/jgarber623/spaceholder.cc/badge.svg)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
+[![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/master.svg?style=flat-square)](https://travis-ci.org/jgarber623/spaceholder.cc)
+[![Dependencies](https://img.shields.io/depfu/jgarber623/spaceholder.cc.svg?style=flat-square)](https://depfu.com/github/jgarber623/spaceholder.cc)
+[![Known Vulnerabilities](https://snyk.io/test/github/jgarber623/spaceholder.cc/badge.svg?style=flat-square)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
 ## Usage
 
@@ -29,8 +30,8 @@ You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For
 
 If diving into Ruby isn't your thing, but you'd still like to support SpaceHolder, consider making a donation! Any amount—large or small—is greatly appreciated. As a token of my gratitude, I'll add your name to the [Acknowledgments](#acknowledgments) below.
 
-[![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg)](https://cash.me/$jgarber)
-[![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg)](https://www.paypal.me/jgarber)
+[![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg?style=flat-square)](https://cash.me/$jgarber)
+[![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg?style=flat-square)](https://www.paypal.me/jgarber)
 
 ## Acknowledgments
 
@@ -38,8 +39,8 @@ Tip o' the hat to [Brad Frost](https://twitter.com/brad_frost) for [the inspirat
 
 All those amazing photos are sourced from [NASA on The Commons](https://www.flickr.com/photos/nasacommons/) and carry no known copyright restrictions.
 
-SpaceHolder is written and maintained by [Jason Garber](https://twitter.com/jgarber).
+SpaceHolder is written and maintained by [Jason Garber](https://sixtwothree.org).
 
 ## License
 
-SpaceHolder is freely available under the [MIT License](http://opensource.org/licenses/MIT). Use it, learn from it, fork it, improve it, change it, tailor it to your needs.
+SpaceHolder is freely available under the [MIT License](https://opensource.org/licenses/MIT). Use it, learn from it, fork it, improve it, change it, tailor it to your needs.
