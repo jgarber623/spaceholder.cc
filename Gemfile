@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'image_processing', '~> 1.2'
 gem 'puma', '~> 3.11', '>= 3.11.4'
 gem 'sinatra', '~> 2.0', '>= 2.0.1'
-gem 'sinatra-asset-pipeline', '~> 2.0', '>= 2.0.1', require: 'sinatra/asset_pipeline'
+gem 'sinatra-asset-pipeline', '~> 2.1', require: 'sinatra/asset_pipeline'
 
 group :development do
   gem 'capistrano', '~> 3.11'

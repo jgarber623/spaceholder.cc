@@ -98,7 +98,7 @@ DEPENDENCIES
   rubocop (~> 0.56.0)
   shotgun (~> 0.9.2)
   sinatra (~> 2.0, >= 2.0.1)
-  sinatra-asset-pipeline (~> 2.0, >= 2.0.1)
+  sinatra-asset-pipeline (~> 2.1)
 
 RUBY VERSION
    ruby 2.5.1p57
