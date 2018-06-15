@@ -2,7 +2,7 @@ ruby '2.5.1'
 
 source 'https://rubygems.org'
 
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.3'
 gem 'puma', '~> 3.11', '>= 3.11.4'
 gem 'sinatra', '~> 2.0', '>= 2.0.3'
 gem 'sinatra-asset-pipeline', '~> 2.1', require: 'sinatra/asset_pipeline'
