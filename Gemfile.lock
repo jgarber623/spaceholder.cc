@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jgarber623/rack-no-www
-  revision: 2094a7a7bc9c8f2ab4799e0204b445cabab1594e
+  revision: 37708861b49b147ae8379365924ea869836b240f
   specs:
     rack-no-www (0.0.3)
 
