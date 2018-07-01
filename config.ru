@@ -10,7 +10,6 @@ Bundler.require(:default, env)
 
 if env == :production
   use Rack::SslEnforcer, redirect_html: false
-  use Rack::NoWww
   use Rack::Deflater
 end
 

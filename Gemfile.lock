@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/jgarber623/rack-no-www
-  revision: 37708861b49b147ae8379365924ea869836b240f
-  specs:
-    rack-no-www (0.0.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,7 +73,6 @@ PLATFORMS
 DEPENDENCIES
   image_processing (~> 1.3)
   puma (~> 3.11, >= 3.11.4)
-  rack-no-www!
   rack-ssl-enforcer (~> 0.2.9)
   rake (~> 12.3, >= 12.3.1)
   rubocop (~> 0.57.2)
