@@ -7,5 +7,8 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/NumericLiterals:
+  Enabled: false
+
 Style/SymbolArray:
   Enabled: false
