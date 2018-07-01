@@ -10,6 +10,7 @@ Bundler.require(:default, env)
 
 if env == :production
   use Rack::SslEnforcer, redirect_html: false
+  use Rack::HostRedirect, %w[spaceholder-cc.herokuapp.com www.spaceholder.cc] => 'spaceholder.cc'
   use Rack::Deflater
 end
 
