@@ -15,6 +15,7 @@ if env == :production
 end
 
 use Rack::Protection::ContentSecurityPolicy, default_src: "'self'", script_src: "'self' 'unsafe-inline'", style_src: "'self' 'unsafe-inline'", frame_ancestors: "'none'"
+use Rack::Protection::StrictTransport, max_age: 31536000, include_subdomains: true, preload: true
 
 require 'spaceholder'
 
