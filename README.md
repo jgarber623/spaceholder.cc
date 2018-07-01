@@ -4,6 +4,7 @@
 
 [![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/master.svg?style=flat-square)](https://travis-ci.org/jgarber623/spaceholder.cc)
 [![Dependencies](https://img.shields.io/depfu/jgarber623/spaceholder.cc.svg?style=flat-square)](https://depfu.com/github/jgarber623/spaceholder.cc)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?style=flat-square)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
 [![Known Vulnerabilities](https://snyk.io/test/github/jgarber623/spaceholder.cc/badge.svg?style=flat-square)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
 ## Usage
