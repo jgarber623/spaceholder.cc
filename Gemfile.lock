@@ -73,7 +73,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  image_processing (~> 1.3)
+  image_processing (~> 1.5)
   puma (~> 3.11, >= 3.11.4)
   rack-host-redirect (~> 1.3)
   rack-ssl-enforcer (~> 0.2.9)
