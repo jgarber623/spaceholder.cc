@@ -16,28 +16,40 @@ describe Spaceholder::App do
   end
 
   context 'when POST /' do
-    it 'renders the index view when missing params' do
-      post '/'
+    context 'when invalid params' do
+      it 'renders the index view when missing params' do
+        post '/'
 
-      expect(last_response.body).to include(homepage_content)
+        expect(last_response.body).to include(homepage_content)
+      end
+
+      it 'renders the index view when missing height param' do
+        post '/', width: 100
+
+        expect(last_response.body).to include(homepage_content)
+      end
+
+      it 'renders the index view when missing width param' do
+        post '/', height: 100
+
+        expect(last_response.body).to include(homepage_content)
+      end
     end
 
-    it 'renders the index view when missing height param' do
-      post '/', width: 100
+    context 'when valid params' do
+      before do
+        post '/', width: 200, height: 100
+      end
 
-      expect(last_response.body).to include(homepage_content)
-    end
+      it 'redirects' do
+        expect(last_response.redirect?).to be(true)
+      end
 
-    it 'renders the index view when missing width param' do
-      post '/', height: 100
+      it 'redirects' do
+        follow_redirect!
 
-      expect(last_response.body).to include(homepage_content)
-    end
-
-    it 'redirects' do
-      post '/', width: 100, height: 100
-
-      expect(last_response.redirect?).to be(true)
+        expect(last_request.path).to eq('/200x100')
+      end
     end
   end
 
@@ -56,18 +68,34 @@ describe Spaceholder::App do
   end
 
   context 'when GET /0' do
-    it 'redirects' do
+    before do
       get '/0'
+    end
 
+    it 'redirects' do
       expect(last_response.redirect?).to be(true)
+    end
+
+    it 'redirects' do
+      follow_redirect!
+
+      expect(last_request.path).to eq('/')
     end
   end
 
   context 'when GET /100x0' do
-    it 'redirects' do
+    before do
       get '/100x0'
+    end
 
+    it 'redirects' do
       expect(last_response.redirect?).to be(true)
+    end
+
+    it 'redirects' do
+      follow_redirect!
+
+      expect(last_request.path).to eq('/')
     end
   end
 
