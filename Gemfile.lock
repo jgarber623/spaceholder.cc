@@ -114,7 +114,7 @@ DEPENDENCIES
   simplecov (~> 0.16.1)
   simplecov-console (~> 0.4.2)
   sinatra (~> 2.0, >= 2.0.3)
-  sinatra-asset-pipeline (~> 2.1)
+  sinatra-asset-pipeline (~> 2.2)
 
 RUBY VERSION
    ruby 2.5.1p57

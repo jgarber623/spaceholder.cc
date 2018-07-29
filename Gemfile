@@ -7,7 +7,7 @@ gem 'puma', '~> 3.12'
 gem 'rack-host-redirect', '~> 1.3'
 gem 'rack-ssl-enforcer', '~> 0.2.9'
 gem 'sinatra', '~> 2.0', '>= 2.0.3'
-gem 'sinatra-asset-pipeline', '~> 2.1', require: 'sinatra/asset_pipeline'
+gem 'sinatra-asset-pipeline', '~> 2.2', require: 'sinatra/asset_pipeline'
 
 group :development, :test do
   gem 'rack-test', '~> 1.0'
