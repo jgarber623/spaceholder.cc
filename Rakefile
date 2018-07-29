@@ -3,7 +3,7 @@ require 'sinatra/asset_pipeline/task'
 
 Sinatra::AssetPipeline::Task.define! Spaceholder::App
 
-unless ENV['RACK_ENV'] == :production
+unless ENV['RACK_ENV'] == 'production'
   require 'rspec/core/rake_task'
 
   RSpec::Core::RakeTask.new
