@@ -1,6 +1,6 @@
 module Spaceholder
   class App < Sinatra::Base
-    DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/
+    DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/.freeze
 
     set :root, File.dirname(File.expand_path('..', __dir__))
 
