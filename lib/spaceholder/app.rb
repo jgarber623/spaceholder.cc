@@ -3,14 +3,22 @@ module Spaceholder
     DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/.freeze
 
     configure do
-      set :root, File.dirname(File.expand_path('..', __dir__))
+      use Rack::Protection, except: [:remote_token, :session_hijacking, :xss_header]
+      use Rack::Protection::ContentSecurityPolicy, default_src: "'self'", script_src: "'self' 'unsafe-inline'", style_src: "'self' 'unsafe-inline'", frame_ancestors: "'none'"
+      use Rack::Protection::StrictTransport, max_age: 31536000, include_subdomains: true, preload: true
 
-      set :protection, except: [:xss_header]
+      set :root, File.dirname(File.expand_path('..', __dir__))
       set :server, :puma
 
       set :assets_css_compressor, :sass
       set :assets_paths, %w[assets/fonts assets/images assets/stylesheets]
       set :assets_precompile, %w[application.css *.png *.svg *.woff *.woff2]
+    end
+
+    configure :production do
+      use Rack::SslEnforcer, redirect_html: false
+      use Rack::HostRedirect, %w[spaceholder-cc.herokuapp.com www.spaceholder.cc] => 'spaceholder.cc'
+      use Rack::Deflater
     end
 
     register Sinatra::AssetPipeline
