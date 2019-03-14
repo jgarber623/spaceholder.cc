@@ -2,14 +2,16 @@ module Spaceholder
   class App < Sinatra::Base
     DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/.freeze
 
-    set :root, File.dirname(File.expand_path('..', __dir__))
+    configure do
+      set :root, File.dirname(File.expand_path('..', __dir__))
 
-    set :protection, except: [:xss_header]
-    set :server, :puma
+      set :protection, except: [:xss_header]
+      set :server, :puma
 
-    set :assets_css_compressor, :sass
-    set :assets_paths, %w[assets/fonts assets/images assets/stylesheets]
-    set :assets_precompile, %w[application.css *.png *.svg *.woff *.woff2]
+      set :assets_css_compressor, :sass
+      set :assets_paths, %w[assets/fonts assets/images assets/stylesheets]
+      set :assets_precompile, %w[application.css *.png *.svg *.woff *.woff2]
+    end
 
     register Sinatra::AssetPipeline
 
