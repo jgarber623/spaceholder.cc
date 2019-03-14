@@ -8,6 +8,9 @@ Metrics/BlockLength:
 Metrics/LineLength:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Max: 2
+
 Style/Documentation:
   Enabled: false
 
