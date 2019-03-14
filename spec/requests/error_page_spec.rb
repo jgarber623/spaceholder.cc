@@ -1,5 +1,5 @@
 describe Spaceholder::App do
-  let(:error_page_content) { '“Houston, we’ve had <a href="http://apollo13.spacelog.org/02:07:55:35/#log-line-201335">a problem</a>.”' }
+  let(:error_page_content) { '“Houston, we’ve had <a href="https://apollo13.spacelog.org/02:07:55:35/#log-line-201335">a problem</a>.”' }
 
   context 'when GET /foo' do
     before do

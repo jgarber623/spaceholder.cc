@@ -11,7 +11,7 @@ I definitely appreciate your interest in (and help improving) SpaceHolder. Thank
 
 ## Installation
 
-SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 2.6.2) and uses the [Bundler](http://bundler.io) gem to manage Ruby dependencies. SpaceHolder also relies on the [ImageMagick](https://www.imagemagick.org) image processing library to dynamically resize images based on the request URL. If you're using macOS, ImageMagick is most easily installed using [Homebrew])(https://brew.sh):
+SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 2.6.2) and uses the [Bundler](https://bundler.io) gem to manage Ruby dependencies. SpaceHolder also relies on the [ImageMagick](https://www.imagemagick.org) image processing library to dynamically resize images based on the request URL. If you're using macOS, ImageMagick is most easily installed using [Homebrew])(https://brew.sh):
 
 ```sh
 brew install imagemagick
@@ -53,6 +53,6 @@ Code styles are like opinions: Everyone's got one and yours is better than mine.
 - Prefer single quotes over double quotes unless interpolating.
 - Follow the conventions you see in the existing source code as best as you can.
 
-SpaceHolder's formatting guidelines are defined in the `.editorconfig` file which uses the [EditorConfig](http://editorconfig.org) syntax. There are [a number of great plugins for a variety of editors](http://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. Using EditorConfig will make your time spent coding a little bit easier.
+SpaceHolder's formatting guidelines are defined in the `.editorconfig` file which uses the [EditorConfig](https://editorconfig.org) syntax. There are [a number of great plugins for a variety of editors](https://editorconfig.org/#download) that utilize the settings in the `.editorconfig` file. Using EditorConfig will make your time spent coding a little bit easier.
 
 Your bug fix or feature addition won't be rejected if it runs afoul of any (or all) of these guidelines, but following the guidelines will definitely make everyone's lives a little easier.
