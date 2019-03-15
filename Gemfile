@@ -8,6 +8,7 @@ gem 'rack-host-redirect', '~> 1.3'
 gem 'rack-ssl-enforcer', '~> 0.2.9'
 gem 'sinatra', '~> 2.0', '>= 2.0.5'
 gem 'sinatra-asset-pipeline', '~> 2.2', require: 'sinatra/asset_pipeline'
+gem 'sinatra-param', git: 'https://github.com/jgarber623/sinatra-param', tag: 'v2.0.0'
 
 group :development, :test do
   gem 'rack-test', '~> 1.1'

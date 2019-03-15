@@ -1,6 +1,6 @@
 module Spaceholder
   class App < Sinatra::Base
-    DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/.freeze
+    SINATRA_PARAM_OPTIONS = { raise: true, required: true, within: (1..5000) }.freeze
 
     configure do
       use Rack::Protection, except: [:remote_token, :session_hijacking, :xss_header]
@@ -23,6 +23,8 @@ module Spaceholder
 
     register Sinatra::AssetPipeline
 
+    helpers Sinatra::Param
+
     get '/' do
       cache_control :public
 
@@ -30,27 +32,32 @@ module Spaceholder
     end
 
     post '/' do
-      return erb :index unless params.key?('width') && params.key?('height')
+      param :width, :integer, SINATRA_PARAM_OPTIONS
+      param :height, :integer, SINATRA_PARAM_OPTIONS
 
       redirect "/#{params[:width]}x#{params[:height]}"
+    rescue InvalidParameterError
+      return erb :index
     end
 
-    get %r{/#{DIMENSIONS_REGEXP}(?:x#{DIMENSIONS_REGEXP})?} do |width, height|
-      return redirect '/' unless width.to_i.positive?
-      return redirect '/' if height && height.to_i <= 0
-
-      content_type :jpg
-
-      cache_control :public, max_age: 3600
-
-      headers 'X-Content-Type-Options' => 'nosniff'
+    get %r{/(?<width>\d{1,4})(?:x(?<height>\d{1,4}))?} do
+      param :width, :integer, SINATRA_PARAM_OPTIONS
+      param :height, :integer, SINATRA_PARAM_OPTIONS.merge(required: false)
 
       begin
-        tempfile = Image.new(width, height).manipulate
+        content_type :jpg
+
+        cache_control :public, max_age: 3600
+
+        headers 'X-Content-Type-Options' => 'nosniff'
+
+        tempfile = Image.new(params[:width], params[:height]).manipulate
         tempfile.read
       ensure
         tempfile.close!
       end
+    rescue InvalidParameterError
+      redirect '/'
     end
 
     not_found do
