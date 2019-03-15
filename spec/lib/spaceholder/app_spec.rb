@@ -60,6 +60,14 @@ describe Spaceholder::App do
     end
   end
 
+  context 'when GET /200' do
+    it 'returns a JPG' do
+      get '/200'
+
+      expect(last_response.content_type).to eq('image/jpeg')
+    end
+  end
+
   context 'when GET /100x0' do
     it 'redirects' do
       get '/100x0'
