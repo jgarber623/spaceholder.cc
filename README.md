@@ -2,11 +2,11 @@
 
 **A space-themed image placeholder service.**
 
-[![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/master.svg?style=flat-square)](https://travis-ci.org/jgarber623/spaceholder.cc)
-[![Dependencies](https://img.shields.io/depfu/jgarber623/spaceholder.cc.svg?style=flat-square)](https://depfu.com/github/jgarber623/spaceholder.cc)
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?style=flat-square)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
-[![Coverage](https://img.shields.io/codeclimate/c/jgarber623/spaceholder.cc.svg?style=flat-square)](https://codeclimate.com/github/jgarber623/spaceholder.cc/code)
-[![Known Vulnerabilities](https://snyk.io/test/github/jgarber623/spaceholder.cc/badge.svg?style=flat-square)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
+[![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/master.svg?style=for-the-badge)](https://travis-ci.org/jgarber623/spaceholder.cc)
+[![Dependencies](https://img.shields.io/depfu/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://depfu.com/github/jgarber623/spaceholder.cc)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
+[![Coverage](https://img.shields.io/codeclimate/c/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc/code)
+[![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
 ## Usage
 
@@ -32,8 +32,8 @@ You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For
 
 If diving into Ruby isn't your thing, but you'd still like to support SpaceHolder, consider making a donation! Any amount—large or small—is greatly appreciated. As a token of my gratitude, I'll add your name to the [Acknowledgments](#acknowledgments) below.
 
-[![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg?style=flat-square)](https://cash.me/$jgarber)
-[![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg?style=flat-square)](https://www.paypal.me/jgarber)
+[![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg?style=for-the-badge)](https://cash.me/$jgarber)
+[![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg?style=for-the-badge)](https://www.paypal.me/jgarber)
 
 ## Acknowledgments
 
