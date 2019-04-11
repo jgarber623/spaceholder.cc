@@ -106,7 +106,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  image_processing (~> 1.8)
+  image_processing (~> 1.9)
   puma (~> 3.12)
   rack-host-redirect (~> 1.3)
   rack-ssl-enforcer (~> 0.2.9)
@@ -119,7 +119,7 @@ DEPENDENCIES
   shotgun (~> 0.9.2)
   simplecov (~> 0.16.1)
   simplecov-console (~> 0.4.2)
-  sinatra (~> 2.0, >= 2.0.5)
+  sinatra (~> 2.0)
   sinatra-asset-pipeline (~> 2.2)
 
 RUBY VERSION

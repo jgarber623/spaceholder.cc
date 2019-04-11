@@ -2,11 +2,11 @@ ruby '2.6.2'
 
 source 'https://rubygems.org'
 
-gem 'image_processing', '~> 1.8'
+gem 'image_processing', '~> 1.9'
 gem 'puma', '~> 3.12'
 gem 'rack-host-redirect', '~> 1.3'
 gem 'rack-ssl-enforcer', '~> 0.2.9'
-gem 'sinatra', '~> 2.0', '>= 2.0.5'
+gem 'sinatra', '~> 2.0'
 gem 'sinatra-asset-pipeline', '~> 2.2', require: 'sinatra/asset_pipeline'
 
 group :development, :test do
