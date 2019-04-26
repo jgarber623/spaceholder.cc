@@ -1,0 +1,15 @@
+{
+  "name": "spaceholder.cc",
+  "private": true,
+  "scripts": {
+    "test": "npx npm-run-all --continue-on-error --print-name --silent test:*",
+    "test:sass": "npx sass-lint --verbose",
+    "test:rubocop": "bin/rubocop",
+    "test:reek": "bin/reek",
+    "test:rspec": "bin/rspec"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass-lint": "^1.13.1"
+  }
+}

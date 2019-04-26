@@ -8,9 +8,15 @@ unless ENV['RACK_ENV'] == 'production'
   require 'rspec/core/rake_task'
   require 'rubocop/rake_task'
 
-  Reek::Rake::Task.new
+  Reek::Rake::Task.new do |task|
+    task.fail_on_error = false
+  end
+
   RSpec::Core::RakeTask.new
-  RuboCop::RakeTask.new
+
+  RuboCop::RakeTask.new do |task|
+    task.fail_on_error = false
+  end
 
   task default: [:rubocop, :reek, :spec]
 end
