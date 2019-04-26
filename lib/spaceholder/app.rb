@@ -46,7 +46,7 @@ module Spaceholder
       headers 'X-Content-Type-Options' => 'nosniff'
 
       begin
-        tempfile = Image.new(width, height).manipulate
+        tempfile = Image.manipulate(width.to_i, (height || width).to_i)
         tempfile.read
       ensure
         tempfile.close!
