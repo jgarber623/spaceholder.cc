@@ -63,14 +63,14 @@ GEM
       rspec-mocks (~> 3.8.0)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.2)
+    rspec-expectations (3.8.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
-    rubocop (0.68.0)
+    rubocop (0.68.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -138,7 +138,7 @@ DEPENDENCIES
   rake (~> 12.3)
   reek (~> 5.4)
   rspec (~> 3.8)
-  rubocop (~> 0.68.0)
+  rubocop (~> 0.68.1)
   rubocop-performance (~> 1.1)
   rubocop-rspec (~> 1.32)
   shotgun (~> 0.9.2)
@@ -148,7 +148,7 @@ DEPENDENCIES
   sinatra-asset-pipeline (~> 2.2)
 
 RUBY VERSION
-   ruby 2.6.2p47
+   ruby 2.6.3p62
 
 BUNDLED WITH
    2.0.1

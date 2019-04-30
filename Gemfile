@@ -1,4 +1,4 @@
-ruby '2.6.2'
+ruby '2.6.3'
 
 source 'https://rubygems.org'
 
@@ -14,7 +14,7 @@ group :development, :test do
   gem 'rake', '~> 12.3'
   gem 'reek', '~> 5.4'
   gem 'rspec', '~> 3.8'
-  gem 'rubocop', '~> 0.68.0', require: false
+  gem 'rubocop', '~> 0.68.1', require: false
   gem 'rubocop-performance', '~> 1.1', require: false
   gem 'rubocop-rspec', '~> 1.32', require: false
 end
