@@ -139,7 +139,7 @@ DEPENDENCIES
   reek (~> 5.4)
   rspec (~> 3.8)
   rubocop (~> 0.68.1)
-  rubocop-performance (~> 1.1)
+  rubocop-performance (~> 1.2)
   rubocop-rspec (~> 1.32)
   shotgun (~> 0.9.2)
   simplecov (~> 0.16.1)
