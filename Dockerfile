@@ -14,8 +14,10 @@ WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
 
-RUN bundle install
+RUN bundle install --without development test
 
 COPY . .
+
+RUN bundle exec rake assets:precompile
 
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
