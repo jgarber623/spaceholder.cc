@@ -16,7 +16,7 @@ module Spaceholder
 
     configure :production do
       use Rack::SslEnforcer, redirect_html: false
-      use Rack::HostRedirect, %w[www.spaceholder.cc] => 'spaceholder.cc'
+      use Rack::HostRedirect, %w[spaceholder-cc-web-6qapjeg6uq-uc.a.run.app www.spaceholder.cc] => 'spaceholder.cc'
       use Rack::Deflater
     end
 
