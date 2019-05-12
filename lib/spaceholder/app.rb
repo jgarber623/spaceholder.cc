@@ -8,7 +8,6 @@ module Spaceholder
       use Rack::Protection::StrictTransport, max_age: 31536000, include_subdomains: true, preload: true
 
       set :root, File.dirname(File.expand_path('..', __dir__))
-      set :server, :puma
 
       set :assets_css_compressor, :sass
       set :assets_paths, %w[assets/fonts assets/images assets/stylesheets]

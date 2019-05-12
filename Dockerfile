@@ -22,4 +22,4 @@ ENV RACK_ENV production
 
 RUN bundle exec rake assets:precompile
 
-CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
+CMD ["bundle", "exec", "rackup", "--port", "8080"]
