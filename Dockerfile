@@ -18,6 +18,8 @@ RUN bundle install --without development test
 
 COPY . .
 
+ENV RACK_ENV production
+
 RUN bundle exec rake assets:precompile
 
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
