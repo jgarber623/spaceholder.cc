@@ -12,6 +12,8 @@ module Spaceholder
       set :assets_css_compressor, :sass
       set :assets_paths, %w[assets/images assets/stylesheets]
       set :assets_precompile, %w[*.png *.svg application.css]
+
+      set :static_cache_control, :immutable
     end
 
     configure :production do
