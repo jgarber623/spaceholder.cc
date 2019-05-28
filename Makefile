@@ -3,11 +3,11 @@
 .DEFAULT_GOAL := install
 
 build:
-	@echo '=> Building and submitting container to Google Cloud Registry...'
+	@echo '=> Building and submitting image to Google Cloud Registry...'
 	gcloud builds submit --tag gcr.io/${PROJECT_ID}/spaceholder-cc-web
 
 deploy:
-	@echo '=> Deploying image to Google Cloud Run...'
+	@echo '=> Deploying container to Google Cloud Run...'
 	gcloud beta run deploy --image gcr.io/${PROJECT_ID}/spaceholder-cc-web
 
 install:
