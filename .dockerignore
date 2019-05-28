@@ -1,5 +1,6 @@
+.dockerignore
 .editorconfig
-.gitignore
+.git*
 .reek.yml
 .rspec
 .rubocop
@@ -10,10 +11,10 @@
 .travis.yml
 *.json
 *.md
-/.git/
 /bin/
 /coverage/
 /node_modules/
 /spec/
+Dockerfile
 LICENSE
 Makefile
