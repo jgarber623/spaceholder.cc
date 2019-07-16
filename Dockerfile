@@ -1,5 +1,7 @@
 FROM ruby:2.6.3-slim-stretch
 
+ENV RACK_ENV production
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         gcc \
@@ -14,11 +16,13 @@ WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
 
-RUN bundle install --without development test
+RUN bundle install --no-cache --without development test \
+    && bundle clean --force \
+    && rm -rf /usr/local/bundle/cache/*.gem \
+    && find /usr/local/bundle/gems/ -name "*.c" -delete \
+    && find /usr/local/bundle/gems/ -name "*.o" -delete
 
 COPY . .
-
-ENV RACK_ENV production
 
 RUN bundle exec rake assets:precompile
 
