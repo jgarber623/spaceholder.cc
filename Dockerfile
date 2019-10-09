@@ -1,4 +1,4 @@
-FROM ruby:2.6.4-slim-stretch
+FROM ruby:2.6.5-slim-stretch
 
 ENV RACK_ENV production
 

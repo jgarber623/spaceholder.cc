@@ -11,7 +11,7 @@ I definitely appreciate your interest in (and help improving) SpaceHolder. Thank
 
 ## Installation
 
-SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 2.6.4) and uses the [Bundler](https://bundler.io) gem to manage Ruby dependencies. The [sass-lint](https://github.com/sasstools/sass-lint) [Node.js](https://nodejs.org) package is also used to flag any issues with coding style in SCSS files.
+SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 2.6.5) and uses the [Bundler](https://bundler.io) gem to manage Ruby dependencies. The [sass-lint](https://github.com/sasstools/sass-lint) [Node.js](https://nodejs.org) package is also used to flag any issues with coding style in SCSS files.
 
 SpaceHolder also relies on the [ImageMagick](https://www.imagemagick.org) image processing library to dynamically resize images based on the request URL. If you're using macOS, ImageMagick is most easily installed using [Homebrew])(https://brew.sh):
 
@@ -19,9 +19,9 @@ SpaceHolder also relies on the [ImageMagick](https://www.imagemagick.org) image 
 brew install imagemagick
 ```
 
-Node.js may also be installed using Homebrew (`brew install node`) or [via other methods](https://nodejs.org/en/download/). Install Ruby 2.6.4 using a method of your choice (e.g. [rbenv](https://github.com/rbenv/rbenv), [chruby](https://github.com/postmodern/chruby), or [RVM](https://rvm.io)).
+Node.js may also be installed using Homebrew (`brew install node`) or [via other methods](https://nodejs.org/en/download/). Install Ruby 2.6.5 using a method of your choice (e.g. [rbenv](https://github.com/rbenv/rbenv), [chruby](https://github.com/postmodern/chruby), or [RVM](https://rvm.io)).
 
-Once you've installed Ruby 2.6.4, install Bundler and the project's dependencies by running:
+Once you've installed Ruby 2.6.5, install Bundler and the project's dependencies by running:
 
 ```sh
 gem install bundler
