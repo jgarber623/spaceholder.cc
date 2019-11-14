@@ -12,7 +12,7 @@ gem 'sinatra-asset-pipeline', '~> 2.2', require: 'sinatra/asset_pipeline'
 group :development, :test do
   gem 'rack-test', '~> 1.1'
   gem 'rake', '~> 12.3'
-  gem 'reek', '~> 5.4', require: false
+  gem 'reek', '~> 5.5', require: false
   gem 'rspec', '~> 3.9'
   gem 'rubocop', '~> 0.76.0', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
