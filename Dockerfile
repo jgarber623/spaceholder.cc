@@ -8,8 +8,7 @@ RUN apt-get update \
         imagemagick \
         make \
     && rm -rf /var/lib/apt/lists/* \
-    && gem update --system \
-    && gem install bundler \
+    && gem install bundler -v 2.0.2 \
     && bundle config --global frozen true
 
 WORKDIR /usr/src/app

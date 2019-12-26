@@ -1,19 +1,14 @@
+dist: bionic
 language: ruby
-cache:
-  directories:
-    - node_modules
-    - vendor/bundle
-before_install:
-  - nvm install node
-install:
-  - bundle install --path vendor/bundle
-  - npm install
+cache: bundler
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - npm test
+  - bin/rubocop
+  - bin/reek
+  - bin/rake
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 notifications:

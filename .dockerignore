@@ -6,14 +6,12 @@
 .rubocop
 .rubocop.yml
 .ruby-version
-.sass-lint.yml
 .simplecov
 .travis.yml
 *.json
 *.md
 /bin/
 /coverage/
-/node_modules/
 /spec/
 cloudbuild.yaml
 Dockerfile
