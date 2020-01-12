@@ -2,12 +2,12 @@ require:
   - rubocop-performance
   - rubocop-rspec
 
+Layout/LineLength:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*.rb
-
-Metrics/LineLength:
-  Enabled: false
 
 RSpec/MultipleExpectations:
   Max: 2
