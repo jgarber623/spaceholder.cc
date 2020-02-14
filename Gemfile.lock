@@ -142,7 +142,7 @@ DEPENDENCIES
   rubocop-performance (~> 1.5)
   rubocop-rspec (~> 1.38)
   shotgun (~> 0.9.2)
-  simplecov (~> 0.18.0)
+  simplecov (~> 0.18.2)
   simplecov-console (~> 0.6.0)
   sinatra (~> 2.0)
   sinatra-asset-pipeline (~> 2.2)
