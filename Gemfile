@@ -14,7 +14,7 @@ group :development, :test do
   gem 'rake', '~> 12.3'
   gem 'reek', '~> 5.6', require: false
   gem 'rspec', '~> 3.9'
-  gem 'rubocop', '~> 0.79.0', require: false
+  gem 'rubocop', '~> 0.80.0', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
   gem 'rubocop-rspec', '~> 1.38', require: false
 end
