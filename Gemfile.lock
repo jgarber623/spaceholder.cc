@@ -111,7 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  image_processing (~> 1.10)
+  image_processing (~> 1.11)
   rack (~> 2.2)
   rack-host-redirect (~> 1.3)
   rack-ssl-enforcer (~> 0.2.9)
