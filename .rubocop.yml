@@ -2,6 +2,9 @@ require:
   - rubocop-performance
   - rubocop-rspec
 
+AllCops:
+  NewCops: enable
+
 Layout/LineLength:
   Enabled: false
 
@@ -16,9 +19,6 @@ Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Style/NumericLiterals:
   Enabled: false
 
 Style/SymbolArray:

@@ -5,7 +5,7 @@ module Spaceholder
     configure do
       use Rack::Protection, except: [:remote_token, :session_hijacking, :xss_header]
       use Rack::Protection::ContentSecurityPolicy, default_src: "'self'", script_src: "'self' 'unsafe-inline'", style_src: "'self' 'unsafe-inline' https://fonts.googleapis.com", font_src: "'self' https://fonts.gstatic.com", frame_ancestors: "'none'"
-      use Rack::Protection::StrictTransport, max_age: 31536000, include_subdomains: true, preload: true
+      use Rack::Protection::StrictTransport, max_age: 31_536_000, include_subdomains: true, preload: true
 
       set :root, File.dirname(File.expand_path('..', __dir__))
 
