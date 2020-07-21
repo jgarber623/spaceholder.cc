@@ -1,4 +1,4 @@
-FROM ruby:2.6.5-slim-stretch
+FROM ruby:2.6.6-slim-stretch
 
 ENV RACK_ENV production
 
@@ -9,13 +9,15 @@ RUN apt-get update \
         make \
     && rm -rf /var/lib/apt/lists/* \
     && gem install bundler -v 2.0.2 \
-    && bundle config --global frozen true
+    && bundle config --global frozen true \
+    && bundle config --global no-cache 'true' \
+    && bundle config --global without 'development test'
 
 WORKDIR /usr/src/app
 
 COPY Gemfile Gemfile.lock ./
 
-RUN bundle install --no-cache --without development test \
+RUN bundle install \
     && bundle clean --force \
     && rm -rf /usr/local/bundle/cache/*.gem \
     && find /usr/local/bundle/gems/ -name "*.c" -delete \
