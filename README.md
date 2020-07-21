@@ -2,7 +2,7 @@
 
 **A space-themed image placeholder service.**
 
-[![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/master.svg?style=for-the-badge)](https://travis-ci.org/jgarber623/spaceholder.cc)
+[![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/main.svg?style=for-the-badge)](https://travis-ci.org/jgarber623/spaceholder.cc)
 [![Dependencies](https://img.shields.io/depfu/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://depfu.com/github/jgarber623/spaceholder.cc)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
 [![Coverage](https://img.shields.io/codeclimate/c/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc/code)
@@ -26,7 +26,7 @@ If you'd like a square image, use a single number in the URL:
 
 ## Improving SpaceHolder
 
-You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For more on how you can help, check out [CONTRIBUTING.md](https://github.com/jgarber623/spaceholder.cc/blob/master/CONTRIBUTING.md).
+You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For more on how you can help, check out [CONTRIBUTING.md](https://github.com/jgarber623/spaceholder.cc/blob/main/CONTRIBUTING.md).
 
 ### Donations
 
