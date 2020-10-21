@@ -16,7 +16,7 @@ group :development, :test do
   gem 'rspec', '~> 3.9'
   gem 'rubocop', '~> 0.93.0', require: false
   gem 'rubocop-performance', '~> 1.8', require: false
-  gem 'rubocop-rspec', '~> 1.43', require: false
+  gem 'rubocop-rspec', '~> 1.44', require: false
 end
 
 group :development do
