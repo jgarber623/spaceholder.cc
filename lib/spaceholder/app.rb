@@ -55,7 +55,7 @@ module Spaceholder
     not_found do
       cache_control :public
 
-      erb :'404'
+      erb :not_found
     end
   end
 end
