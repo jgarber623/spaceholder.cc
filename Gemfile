@@ -2,7 +2,7 @@ ruby '2.6.6'
 
 source 'https://rubygems.org'
 
-gem 'image_processing', '~> 1.11'
+gem 'image_processing', '~> 1.12'
 gem 'rack', '~> 2.2'
 gem 'rack-host-redirect', '~> 1.3'
 gem 'rack-ssl-enforcer', '~> 0.2.9'
@@ -14,9 +14,9 @@ group :development, :test do
   gem 'rake', '~> 12.3'
   gem 'reek', '~> 6.0', require: false
   gem 'rspec', '~> 3.10'
-  gem 'rubocop', '~> 0.93.0', require: false
+  gem 'rubocop', '~> 1.2', require: false
   gem 'rubocop-performance', '~> 1.8', require: false
-  gem 'rubocop-rspec', '~> 1.44', require: false
+  gem 'rubocop-rspec', '~> 2.0', require: false
 end
 
 group :development do
