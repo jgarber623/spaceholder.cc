@@ -1,6 +1,7 @@
 module Spaceholder
   class App < Sinatra::Base
-    DIMENSIONS_REGEXP = /([1-4]?\d{1,3}|5000)/.freeze
+    DIMENSION_REGEXP = /([1-4]?\d{1,3}|5000)/.freeze
+    DIMENSIONS_REGEXP = %r{/#{DIMENSION_REGEXP}(?:x#{DIMENSION_REGEXP})?}.freeze
 
     configure do
       use Rack::Protection, except: [:remote_token, :session_hijacking, :xss_header]
@@ -34,7 +35,7 @@ module Spaceholder
       redirect "/#{params[:width]}x#{params[:height]}"
     end
 
-    get %r{/#{DIMENSIONS_REGEXP}(?:x#{DIMENSIONS_REGEXP})?} do |width, height|
+    get DIMENSIONS_REGEXP do |width, height|
       return redirect '/' unless width.to_i.positive?
       return redirect '/' if height && height.to_i <= 0
 
