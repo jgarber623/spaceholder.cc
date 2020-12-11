@@ -2,7 +2,7 @@
 
 **A space-themed image placeholder service.**
 
-[![Build Status](https://img.shields.io/travis/jgarber623/spaceholder.cc/main.svg?style=for-the-badge)](https://travis-ci.org/jgarber623/spaceholder.cc)
+[![Build Status](https://img.shields.io/travis/com/jgarber623/spaceholder.cc/main.svg?style=for-the-badge)](https://travis-ci.com/github/jgarber623/spaceholder.cc)
 [![Dependencies](https://img.shields.io/depfu/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://depfu.com/github/jgarber623/spaceholder.cc)
 [![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
 [![Coverage](https://img.shields.io/codeclimate/c/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc/code)
