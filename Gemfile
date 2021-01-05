@@ -25,6 +25,6 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', '~> 0.20.0', require: false
+  gem 'simplecov', '~> 0.21.1', require: false
   gem 'simplecov-console', '~> 0.8.0', require: false
 end
