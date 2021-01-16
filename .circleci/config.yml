@@ -1,0 +1,34 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.1.2
+
+jobs:
+  test:
+    executor:
+      name: ruby/default
+      tag: 2.6.6
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run:
+          name: Install CodeClimate test reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+            ./cc-test-reporter before-build
+      - run:
+          name: Run default Rake task
+          command: bundle exec rake
+      - run:
+          name: Upload coverage report to CodeClimate
+          command: ./cc-test-reporter after-build
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - test:
+          filters:
+            branches:
+              ignore: production
