@@ -13,8 +13,8 @@ jobs:
       - run:
           name: Install ImageMagick
           command: |
-            apt-get update
-            apt-get install -y --no-install-recommends imagemagick
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends imagemagick
       - ruby/install-deps
       - run:
           name: Install CodeClimate test reporter
