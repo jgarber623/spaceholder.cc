@@ -2,11 +2,10 @@
 
 **A space-themed image placeholder service.**
 
-[![Build](https://img.shields.io/circleci/build/github/jgarber623/spaceholder.cc?style=for-the-badge)](https://app.circleci.com/pipelines/github/jgarber623/spaceholder.cc)
-[![Dependencies](https://img.shields.io/depfu/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://depfu.com/github/jgarber623/spaceholder.cc)
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
-[![Coverage](https://img.shields.io/codeclimate/c/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc/code)
-[![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/jgarber623/spaceholder.cc.svg?style=for-the-badge)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
+[![Build](https://img.shields.io/circleci/build/github/jgarber623/spaceholder.cc?logo=circleci&style=for-the-badge)](https://app.circleci.com/pipelines/github/jgarber623/spaceholder.cc)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?logo=code-climate&style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
+[![Coverage](https://img.shields.io/codeclimate/c/jgarber623/spaceholder.cc.svg?logo=code-climate&style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc/code)
+[![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/jgarber623/spaceholder.cc.svg?logo=snyk&style=for-the-badge)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
 ## Usage
 
