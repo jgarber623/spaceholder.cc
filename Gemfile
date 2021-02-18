@@ -10,6 +10,7 @@ gem 'sinatra', '~> 2.0'
 gem 'sinatra-asset-pipeline', '~> 2.2', require: 'sinatra/asset_pipeline'
 
 group :development, :test do
+  gem 'bundler-audit', '~> 0.7.0.1'
   gem 'rack-test', '~> 1.1'
   gem 'rake', '~> 12.3'
   gem 'reek', '~> 6.0', require: false
