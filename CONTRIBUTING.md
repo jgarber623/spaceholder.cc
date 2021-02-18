@@ -32,7 +32,7 @@ bundle install
 To start the app locally in development mode, run:
 
 ```sh
-bin/shotgun --host 0.0.0.0
+bin/run
 ```
 
 This will fire up a server and you'll have the app running locally at `http://localhost:9393/`.
