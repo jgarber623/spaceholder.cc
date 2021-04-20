@@ -28,6 +28,8 @@ jobs:
       - run:
           name: Upload coverage report to CodeClimate
           command: ./cc-test-reporter after-build
+      - store_test_results:
+          path: ./tmp
 
 workflows:
   version: 2

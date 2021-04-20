@@ -15,6 +15,7 @@ group :development, :test do
   gem 'rake'
   gem 'reek', require: false
   gem 'rspec'
+  gem 'rspec_junit_formatter'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rake', require: false
