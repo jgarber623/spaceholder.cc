@@ -39,7 +39,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    reek (6.0.3)
+    reek (6.0.4)
       kwalify (~> 0.7.0)
       parser (~> 3.0.0)
       psych (~> 3.1)
