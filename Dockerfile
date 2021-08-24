@@ -1,4 +1,4 @@
-FROM ruby:2.7-alpine as Ruby
+FROM ruby:2.7.4-alpine as Ruby
 
 ##################################################
 # Build Stage

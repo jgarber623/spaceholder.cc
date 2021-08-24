@@ -7,7 +7,7 @@ jobs:
   test:
     executor:
       name: ruby/default
-      tag: 2.7.3
+      tag: 2.7.4
     steps:
       - checkout
       - run:
