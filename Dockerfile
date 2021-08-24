@@ -1,9 +1,9 @@
-FROM ruby:2.7.4-alpine as Ruby
+FROM ruby:2.7.4-alpine as ruby-stage
 
 ##################################################
 # Build Stage
 ##################################################
-FROM Ruby as Build
+FROM ruby-stage as build-stage
 
 ENV RACK_ENV production
 
@@ -30,14 +30,14 @@ RUN bundle exec rake assets:precompile
 ##################################################
 # Final Stage
 ##################################################
-FROM Ruby
+FROM ruby-stage
 
 ENV RACK_ENV production
 
 RUN apk add --no-cache imagemagick
 
-COPY --from=Build /usr/local/bundle /usr/local/bundle
-COPY --from=Build /usr/src/app /usr/src/app
+COPY --from=build-stage /usr/local/bundle /usr/local/bundle
+COPY --from=build-stage /usr/src/app /usr/src/app
 
 WORKDIR /usr/src/app
 
