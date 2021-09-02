@@ -7,8 +7,8 @@ echo '[ bin/ci ] => bundle exec rspec'
 bundle exec rspec --format progress --format RspecJunitFormatter --out ./tmp/rspec/results.xml
 
 echo '[ bin/ci ] Analyzing Ruby dependencies for security vulnerabilities...'
-echo '[ bin/ci ] => bundle exec audit check --update'
-bundle exec bundle audit check --update
+echo '[ bin/ci ] => bundle exec bundle-audit check --update'
+bundle exec bundle-audit check --update
 
 set +e
 
