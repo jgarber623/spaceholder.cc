@@ -6,7 +6,7 @@ gem 'image_processing', '~> 1.12'
 gem 'rack', '~> 2.2'
 gem 'rack-host-redirect', '~> 1.3'
 gem 'rack-ssl-enforcer', '~> 0.2.9'
-gem 'sinatra', '~> 2.0'
+gem 'sinatra', '~> 2.2'
 gem 'sinatra-asset-pipeline', '~> 2.2', require: 'sinatra/asset_pipeline'
 
 group :development, :test do
