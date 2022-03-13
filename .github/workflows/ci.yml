@@ -3,6 +3,15 @@ name: CI
 on: [push, pull_request]
 
 jobs:
+  audit:
+    name: Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - run: bundle exec bundle-audit check --update
   lint:
     name: Lint
     runs-on: ubuntu-latest
