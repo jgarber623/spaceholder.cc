@@ -1,7 +1,7 @@
 module Spaceholder
   class App < Sinatra::Base
-    DIMENSION_REGEXP = /([1-4]?\d{1,3}|5000)/
-    DIMENSIONS_REGEXP = %r{/#{DIMENSION_REGEXP}(?:x#{DIMENSION_REGEXP})?}
+    DIMENSION_REGEXP = /([1-4]?\d{1,3}|5000)/.freeze
+    DIMENSIONS_REGEXP = %r{/#{DIMENSION_REGEXP}(?:x#{DIMENSION_REGEXP})?}.freeze
 
     configure do
       use Rack::Protection, except: [:remote_token, :session_hijacking, :xss_header]
