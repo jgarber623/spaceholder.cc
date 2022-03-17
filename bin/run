@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-bundle exec shotgun --host 0.0.0.0
