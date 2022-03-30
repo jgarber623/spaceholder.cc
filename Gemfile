@@ -29,6 +29,7 @@ group :development do
 end
 
 group :test do
+  gem 'rspec-github', require: false
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
