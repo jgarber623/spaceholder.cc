@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+bundle exec rerun --name spaceholder.cc -- rackup --server puma
