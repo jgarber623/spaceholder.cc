@@ -1,0 +1,7 @@
+inherit_from:
+  - https://raw.githubusercontent.com/jgarber623/rubocop-configs/main/.rubocop.roda.yml
+
+# Checks if the length of a block exceeds some maximum value.
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
