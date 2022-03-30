@@ -1,0 +1,80 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background-color: #252c32;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+footer,
+header,
+main {
+  display: block;
+}
+
+a {
+  background: transparent;
+  color: #fff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+pre {
+  overflow: auto;
+}
+
+code {
+  font-family: "Titillium Web", sans-serif;
+}
+
+button,
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+
+  &::-moz-focus-inner,
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+  overflow: visible;
+  text-transform: none;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+input {
+  line-height: normal;
+}

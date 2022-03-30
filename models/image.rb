@@ -1,0 +1,31 @@
+# frozen_string_literal: true
+
+class Image
+  SOURCE_PATHS = Dir.glob(File.join(__dir__, '../assets/images/photos/*.jpg')).freeze
+
+  # @return [Integer]
+  attr_reader :width
+
+  # @return [Integer]
+  attr_reader :height
+
+  # @return [String]
+  attr_reader :source
+
+  # @param width [Integer]
+  # @param height [Integer]
+  def initialize(width, height)
+    @width = Integer(width)
+    @height = Integer(height)
+    @source = SOURCE_PATHS.sample
+  end
+
+  # @return [Tempfile]
+  def process
+    ImageProcessing::Vips
+      .source(source)
+      .resize_to_fill(width, height)
+      .saver(interlace: true, quality: 60, strip: true)
+      .call
+  end
+end
