@@ -33,11 +33,18 @@ class Spaceholder < Roda
   plugin :heartbeat
 
   # Third-party plugins
-  plugin :sprockets, debug: false, precompile: %w[application.css]
+  plugin :sprockets,
+         css_compressor: :sassc,
+         debug: false,
+         precompile: %w[application.css spaceholder-180x180.png]
 
   configure do
+    use Rack::CommonLogger
+  end
+
+  configure :production do
     use Rack::Deflater
-    # use Rack::Static, urls: ['/assets'], root: 'public'
+    use Rack::Static, urls: ['/assets'], root: 'public'
   end
 
   route do |r|
