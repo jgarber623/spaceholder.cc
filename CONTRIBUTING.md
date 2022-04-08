@@ -9,40 +9,38 @@ I'd love to have your help improving SpaceHolder! If you'd like to pitch in, you
 
 I definitely appreciate your interest in (and help improving) SpaceHolder. Thanks!
 
-## Installation
+## Setup
 
-SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 2.7.4) and uses the [Bundler](https://bundler.io) gem to manage Ruby dependencies.
+SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 3.1.1) and uses the [Bundler](https://bundler.io) gem to manage Ruby dependencies. Local development is done within a [Docker](https://docker.com) container running a custom-built image.
 
-SpaceHolder also relies on the [ImageMagick](https://www.imagemagick.org) image processing library to dynamically resize images based on the request URL. If you're using macOS, ImageMagick is most easily installed using [Homebrew])(https://brew.sh):
-
-```sh
-brew install imagemagick
-```
-
-Install Ruby 2.7.4 using a method of your choice (e.g. [rbenv](https://github.com/rbenv/rbenv), [chruby](https://github.com/postmodern/chruby), or [RVM](https://rvm.io)).
-
-Once you've installed Ruby 2.7.4, install Bundler and the project's dependencies by running:
+To get started, install the version of [Docker Desktop](https://www.docker.com/products/docker-desktop/) that's most appropriate for your system. With Docker Desktop installed and running, open a Terminal window and `cd` to your checked out copy of the application and run:
 
 ```sh
-gem install bundler -v 2.0.2
-
-bundle install
+bin/start --build
 ```
 
-To start the app locally in development mode, run:
+This command will build a custom Docker image, run a development container using that image, and mount your local copy of the code into the running container. This setup allows you to make changes to the application in your editor of choice and have those changes immediately reflected in the running container.
+
+To run the application in the custom-built Docker container, open a new Terminal tab and run:
 
 ```sh
-bin/run
+bin/exec bin/run
 ```
 
-This will fire up a server and you'll have the app running locally at `http://localhost:9393/`.
+The `bin/exec` script will forward any commands sent to it into the running container. For example, if you add a gem, you would run:
+
+```sh
+bin/exec bundle install
+```
+
+After running `bin/exec bin/run`, you should be able to access the application in a Web browser by loading `http://localhost:8080`.
 
 ## Get set up to contribute
 
-Contributing to SpaceHolder is pretty straightforward:
+Contribute to SpaceHolder by doing the following:
 
 1. Fork the SpaceHolder repo and clone it.
-1. Install development dependencies by running `bundle install` from the root of the project.
+1. Get up and running by following the [setup instructions](#setup) above.
 1. Create a feature branch for the issue or new feature you're looking to tackle: `git checkout -b your-descriptive-branch-name`.
 1. _Write some code!_
 1. Commit your changes: `git commit -am 'Add some new feature or fix some issue'`.
