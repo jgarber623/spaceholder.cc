@@ -1,0 +1,16 @@
+.dockerignore
+.DS_Store
+.editorconfig
+.git*
+.reek.yml
+.rspec
+.rubocop*
+.ruby-version
+.simplecov
+*.md
+/bin/
+/coverage/
+/spec/
+docker-compose.yml
+Dockerfile
+LICENSE

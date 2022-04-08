@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "[ bin/start ] 🐳 Running ./docker-compose.yml..."
+docker compose up $@
