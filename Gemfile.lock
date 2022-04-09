@@ -36,7 +36,7 @@ GEM
       kwalify (~> 0.7.0)
       parser (~> 3.1.0)
       rainbow (>= 2.0, < 4.0)
-    regexp_parser (2.2.1)
+    regexp_parser (2.3.0)
     rerun (0.13.1)
       listen (~> 3.0)
     rexml (3.2.5)
