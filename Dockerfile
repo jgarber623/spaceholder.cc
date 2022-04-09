@@ -3,7 +3,7 @@
 ################################################################################
 FROM ruby:3.1.1-alpine3.15 AS base-stage
 
-ARG BUNDLER_VERSION="2.3.9"
+ARG BUNDLER_VERSION="2.3.11"
 
 ENV BUNDLE_JOBS=10 \
     BUNDLE_RETRIES=5
