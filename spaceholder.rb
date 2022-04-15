@@ -73,7 +73,6 @@ class Spaceholder < Roda
 
         response.cache_control public: true, max_age: 3600
         response['Content-Type'] = 'image/jpeg'
-        response['X-Content-Type-Options'] = 'nosniff'
 
         response.write image.read
         response.finish
