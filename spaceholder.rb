@@ -24,7 +24,11 @@ class Spaceholder < Roda
     csp.frame_ancestors :none
   end
 
-  plugin :default_headers, 'Content-Type' => 'text/html; charset=utf-8'
+  plugin :default_headers,
+    'Content-Type' => 'text/html; charset=utf-8',
+    'Referrer-Policy' => 'no-referrer-when-downgrade',
+    'X-Frame-Options' => 'DENY',
+    'X-XSS-Protection' => '0'
 
   # Other plugins
   plugin :environments
