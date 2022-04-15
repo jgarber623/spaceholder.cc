@@ -24,9 +24,7 @@ class Spaceholder < Roda
     csp.frame_ancestors :none
   end
 
-  plugin :default_headers,
-         'Content-Type' => 'text/html; charset=utf-8',
-         'Strict-Transport-Security' => 'max-age=31536000; includeSubDomains; preload'
+  plugin :default_headers, 'Content-Type' => 'text/html; charset=utf-8'
 
   # Other plugins
   plugin :environments
