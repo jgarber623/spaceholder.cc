@@ -11,7 +11,7 @@ I definitely appreciate your interest in (and help improving) SpaceHolder. Thank
 
 ## Setup
 
-SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 3.1.1) and uses the [Bundler](https://bundler.io) gem to manage Ruby dependencies. Local development is done within a [Docker](https://docker.com) container running a custom-built image.
+SpaceHolder is written in [Ruby](https://www.ruby-lang.org) (version 3.1.2) and uses the [Bundler](https://bundler.io) gem to manage Ruby dependencies. Local development is done within a [Docker](https://docker.com) container running a custom-built image.
 
 To get started, install the version of [Docker Desktop](https://www.docker.com/products/docker-desktop/) that's most appropriate for your system. With Docker Desktop installed and running, open a Terminal window and `cd` to your checked out copy of the application and run:
 
