@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Image
-  SOURCE_PATHS = Dir.glob(File.join(__dir__, '../assets/images/photos/*.jpg')).freeze
+  SOURCE_PATHS = Dir.glob(File.expand_path('../assets/images/photos/*.jpg', __dir__)).freeze
 
   # @return [Integer]
   attr_reader :width
