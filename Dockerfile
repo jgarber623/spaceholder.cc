@@ -33,11 +33,13 @@ RUN bundle install
 ################################################################################
 FROM base-stage AS production-build-stage
 
-ENV RACK_ENV=production
+ENV RACK_ENV=production \
+    BUNDLE_DEPLOYMENT=1 \
+    BUNDLE_WITHOUT=development:test
 
 RUN apk add --no-cache --update g++ make
 
-RUN bundle install --deployment --without development test \
+RUN bundle install \
     && bundle clean --force \
     && rm -rf vendor/bundle/ruby/3.1.0/cache/*.gem \
     && find vendor/bundle/ruby/3.1.0/gems/ \( -name "*.c" -o -name "*.o" \) -delete
