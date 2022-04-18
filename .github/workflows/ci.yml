@@ -22,7 +22,7 @@ jobs:
         id: docker-meta
         with:
           flavor: |
-            latest=auto
+            latest=true
           images: |
             spaceholder-cc-web
           tags: |
