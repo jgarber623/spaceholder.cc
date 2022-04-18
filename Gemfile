@@ -15,6 +15,7 @@ gem 'sassc'
 gem 'tilt'
 
 group :development do
+  gem 'pry-byebug'
   gem 'rerun'
 end
 
