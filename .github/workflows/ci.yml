@@ -60,7 +60,7 @@ jobs:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
       - uses: google-github-actions/deploy-cloudrun@v0
         with:
-          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           service: spaceholder-cc-web
   lint:
     name: Lint
