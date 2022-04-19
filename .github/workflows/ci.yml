@@ -21,7 +21,7 @@ jobs:
     if: github.ref_name == 'production'
     runs-on: ubuntu-latest
     env:
-      REPOSITORY: ghcr.io
+      REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}
     steps:
       - uses: docker/metadata-action@v3
