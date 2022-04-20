@@ -74,7 +74,7 @@ jobs:
       - uses: google-github-actions/deploy-cloudrun@v0
         with:
           image: gcr.io/${{ env.GCP_PROJECT }}/${{ github.repository }}
-          service: ${{ secrets.GCP_SERVICE_NAME }}
+          service: spaceholder-cc-web
   lint:
     name: Lint
     runs-on: ubuntu-latest
