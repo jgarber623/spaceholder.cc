@@ -52,8 +52,8 @@ jobs:
           cache-to: type=gha,mode=max
           push: true
           tags: |
-            gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ github.repository }}:${{ steps.vars.outputs.short_sha }}
-            gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ github.repository }}:latest
+            gcr.io/${{ env.GCP_PROJECT }}/${{ github.repository }}:${{ steps.vars.outputs.short_sha }}
+            gcr.io/${{ env.GCP_PROJECT }}/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.short_sha }}
             ghcr.io/${{ github.repository }}:latest
           target: production
@@ -73,7 +73,7 @@ jobs:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
       - uses: google-github-actions/deploy-cloudrun@v0
         with:
-          image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ github.repository }}
+          image: gcr.io/${{ env.GCP_PROJECT }}/${{ github.repository }}
           service: ${{ secrets.GCP_SERVICE_NAME }}
   lint:
     name: Lint
