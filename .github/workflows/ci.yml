@@ -52,8 +52,8 @@ jobs:
           cache-to: type=gha,mode=max
           push: true
           tags: |
-            gcr.io/${{ secrets.GCP_PROJECT_ID }}/spaceholder.cc:${{ steps.vars.outputs.short_sha }}
-            gcr.io/${{ secrets.GCP_PROJECT_ID }}/spaceholder.cc:latest
+            gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ github.repository }}:${{ steps.vars.outputs.short_sha }}
+            gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.short_sha }}
             ghcr.io/${{ github.repository }}:latest
           target: production
@@ -62,7 +62,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    needs: [build]
+    needs: build
     if: github.ref_name == 'production'
     runs-on: ubuntu-latest
     steps:
@@ -73,8 +73,8 @@ jobs:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
       - uses: google-github-actions/deploy-cloudrun@v0
         with:
-          image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/spaceholder.cc
-          service: spaceholder-cc-web
+          image: gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ github.repository }}
+          service: ${{ secrets.GCP_SERVICE_NAME }}
   lint:
     name: Lint
     runs-on: ubuntu-latest
