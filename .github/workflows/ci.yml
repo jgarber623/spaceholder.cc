@@ -83,7 +83,10 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - run: bundle exec rubocop
+      - run: bundle exec rubocop --format CodeScanning::SarifFormatter --out rubocop.sarif
+      - uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: rubocop.sarif
   test:
     name: Test
     runs-on: ubuntu-latest

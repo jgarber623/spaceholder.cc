@@ -7,6 +7,8 @@ GEM
       bundler (>= 1.2.0, < 3)
       thor (~> 1.0)
     byebug (11.1.3)
+    code-scanning-rubocop (0.6.1)
+      rubocop (~> 1.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
     diff-lcs (1.5.0)
@@ -116,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler-audit
+  code-scanning-rubocop
   image_processing
   pry-byebug
   puma
