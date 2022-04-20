@@ -1,9 +1,0 @@
-detectors:
-  IrresponsibleModule:
-    enabled: false
-  UncommunicativeVariableName:
-    accept:
-      - r
-
-exclude_paths:
-  - vendor/

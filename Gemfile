@@ -22,7 +22,6 @@ end
 group :test do
   gem 'bundler-audit'
   gem 'rack-test'
-  gem 'reek', require: false
   gem 'rspec'
   gem 'rspec-github', require: false
   gem 'rubocop', require: false

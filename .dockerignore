@@ -2,7 +2,6 @@
 .DS_Store
 .editorconfig
 .git*
-.reek.yml
 .rspec
 .rubocop*
 .ruby-version
