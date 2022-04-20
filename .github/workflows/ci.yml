@@ -51,9 +51,9 @@ jobs:
           cache-to: type=gha,mode=max
           push: true
           tags: |
-            gcr.io/${{ github.repository }}:${{ steps.vars.outputs.sha_short }}
-            gcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.sha_short }}
+            gcr.io/${{ env.GCP_PROJECT_ID }}/spaceholder.cc:${{ steps.vars.outputs.short_sha }}
+            gcr.io/${{ env.GCP_PROJECT_ID }}/spaceholder.cc:latest
+            ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.short_sha }}
             ghcr.io/${{ github.repository }}:latest
           target: production
   # deploy:
