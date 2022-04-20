@@ -2,10 +2,6 @@ name: CI
 
 on: [push, pull_request, workflow_dispatch]
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   audit:
     name: Audit
@@ -20,48 +16,64 @@ jobs:
     name: Build
     permissions:
       contents: read
+      id-token: write
       packages: write
     needs: [audit, lint, test]
     if: github.ref_name == 'production'
     runs-on: ubuntu-latest
     steps:
-      - uses: docker/metadata-action@v3
-        id: docker-meta
-        with:
-          flavor: latest=true
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: type=sha,prefix=
       - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
+      - uses: google-github-actions/auth@v0
+        id: gcloud-auth
         with:
-          registry: ${{ env.REGISTRY }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+      - name: Authenticate to Google Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: gcr.io
+          username: oauth2accesstoken
+          password: ${{ steps.gcloud-auth.outputs.access_token }}
+      - name: Authenticate to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: docker/build-push-action@v2
+      - name: Generate short SHA
+        id: vars
+        run: echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
+      - name: Build and push container images
+        uses: docker/build-push-action@v2
         with:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           push: true
-          tags: ${{ steps.docker-meta.outputs.tags }}
+          tags: |
+            gcr.io/${{ github.repository }}:${{ steps.vars.outputs.sha_short }}
+            gcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.sha_short }}
+            ghcr.io/${{ github.repository }}:latest
           target: production
-  deploy:
-    name: Deploy
-    permissions:
-      contents: read
-      id-token: write
-    needs: [build]
-    if: github.ref_name == 'production'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: google-github-actions/auth@v0
-        with:
-          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
-          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
-      - uses: google-github-actions/deploy-cloudrun@v0
-        with:
-          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-          service: spaceholder-cc-web
+  # deploy:
+  #   name: Deploy
+  #   permissions:
+  #     contents: read
+  #     id-token: write
+  #   needs: [build]
+  #   if: github.ref_name == 'production'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: google-github-actions/auth@v0
+  #       with:
+  #         service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+  #         workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+  #     - uses: google-github-actions/deploy-cloudrun@v0
+  #       with:
+  #         image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+  #         service: spaceholder-cc-web
   lint:
     name: Lint
     runs-on: ubuntu-latest
