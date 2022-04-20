@@ -3,6 +3,16 @@ name: CI
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: github/codeql-action/init@v2
+        with:
+          languages: ruby
+      - uses: github/codeql-action/autobuild@v2
+      - uses: github/codeql-action/analyze@v2
   audit:
     name: Audit
     runs-on: ubuntu-latest
