@@ -15,7 +15,6 @@ jobs:
       contents: read
       id-token: write
       packages: write
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment:
       name: production
