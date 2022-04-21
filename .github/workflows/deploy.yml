@@ -10,7 +10,7 @@ concurrency: production
 
 jobs:
   ci:
-    uses: ./.github/workflows/ci@production
+    uses: ./.github/workflows/ci
   build:
     name: Build
     permissions:
