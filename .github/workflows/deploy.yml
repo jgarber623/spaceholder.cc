@@ -10,6 +10,9 @@ concurrency: production
 
 jobs:
   ci:
+    permissions:
+      contents: read
+      security-events: write
     uses: ./.github/workflows/ci.yml
   build:
     name: Build
