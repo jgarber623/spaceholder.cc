@@ -1,6 +1,12 @@
 name: CI
 
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches-ignore: [production]
+  pull_request:
+    branches-ignore: [production]
+  workflow_call:
+  workflow_dispatch:
 
 jobs:
   analyze:

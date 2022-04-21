@@ -9,6 +9,8 @@ on:
 concurrency: production
 
 jobs:
+  ci:
+    uses: ./.github/workflows/ci@production
   build:
     name: Build
     permissions:
