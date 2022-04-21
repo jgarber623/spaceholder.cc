@@ -10,6 +10,7 @@ concurrency: production
 
 jobs:
   ci:
+    name: CI
     permissions:
       contents: read
       security-events: write
@@ -20,6 +21,7 @@ jobs:
       contents: read
       id-token: write
       packages: write
+    needs: ci
     runs-on: ubuntu-latest
     environment: production
     steps:
