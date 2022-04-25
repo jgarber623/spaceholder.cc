@@ -3,7 +3,7 @@
 require_relative 'models/image'
 
 class Spaceholder < Roda
-  DIMENSION_REGEXP = /([1-4]?\d{1,3}|5000)/
+  DIMENSION_REGEXP = /([1-3]?\d{1,3}|4000)/
   DIMENSIONS_REGEXP = /#{DIMENSION_REGEXP}(?:x#{DIMENSION_REGEXP})?/
 
   # Routing plugins
