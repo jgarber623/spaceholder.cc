@@ -22,10 +22,10 @@ class Image
 
   # @return [Tempfile]
   def process
-    ImageProcessing::Vips
+    ImageProcessing::MiniMagick
       .source(source)
       .resize_to_fill(width, height)
-      .saver(interlace: true, quality: 60, strip: true)
+      .saver(interlace: 'Line', quality: 60, strip: true)
       .call
   end
 end

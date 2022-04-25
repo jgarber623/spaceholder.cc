@@ -10,6 +10,8 @@ ENV BUNDLE_JOBS=10 \
 
 EXPOSE 8080
 
+RUN apk add --no-cache --update graphicsmagick
+
 RUN echo "gem: --no-document" >> ~/.gemrc && \
     gem install bundler --version "${BUNDLER_VERSION}"
 
@@ -24,7 +26,7 @@ FROM base-stage AS development
 
 ENV RACK_ENV=development
 
-RUN apk add --no-cache --update g++ git make vips
+RUN apk add --no-cache --update g++ git make
 
 RUN bundle install
 
@@ -56,8 +58,6 @@ FROM base-stage AS production
 ENV RACK_ENV=production \
     BUNDLE_DEPLOYMENT=1 \
     BUNDLE_WITHOUT=development:test
-
-RUN apk add --no-cache --update vips
 
 COPY --from=production-build-stage /usr/src/app ./
 
