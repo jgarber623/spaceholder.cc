@@ -24,6 +24,7 @@ group :test do
   gem 'code-scanning-rubocop', require: false
   gem 'rack-test'
   gem 'rspec'
+  gem 'rspec-its'
   gem 'rspec-github', require: false
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false

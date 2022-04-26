@@ -45,7 +45,7 @@ RSpec.describe Spaceholder, roda: :app do
     before { get '/foo' }
 
     it { is_expected.to be_not_found }
-    it { expect(response.body).to include('“Houston, we’ve had <a href="https://apollo13.spacelog.org/02:07:55:35/#log-line-201335">a problem</a>.”') }
+    its(:body) { is_expected.to include('“Houston, we’ve had <a href="https://apollo13.spacelog.org/02:07:55:35/#log-line-201335">a problem</a>.”') }
   end
 
   describe 'GET /0' do

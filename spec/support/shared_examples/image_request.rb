@@ -2,5 +2,5 @@
 
 RSpec.shared_examples 'an image request' do
   it { is_expected.to be_ok }
-  it { expect(response.content_type).to eq('image/jpeg') }
+  its(:content_type) { is_expected.to eq('image/jpeg') }
 end
