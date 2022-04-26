@@ -12,4 +12,8 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 
   config.disable_monkey_patching!
+
+  def app
+    Spaceholder.freeze.app
+  end
 end

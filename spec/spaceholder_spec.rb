@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe Spaceholder do
-  subject(:app) { described_class.app }
-
   describe 'GET /' do
     it_behaves_like 'a homepage request' do
       let(:response) { get '/' }
