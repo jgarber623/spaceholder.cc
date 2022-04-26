@@ -29,7 +29,7 @@ RSpec.describe Spaceholder, roda: :app do
     context 'when valid params' do
       before { post '/', width: 200, height: 100 }
 
-      it { expect(response).to be_redirect }
+      it { is_expected.to be_redirect }
 
       it 'redirects' do
         response
@@ -44,7 +44,7 @@ RSpec.describe Spaceholder, roda: :app do
   describe 'GET /foo' do
     before { get '/foo' }
 
-    it { expect(response).to be_not_found }
+    it { is_expected.to be_not_found }
     it { expect(response.body).to include('“Houston, we’ve had <a href="https://apollo13.spacelog.org/02:07:55:35/#log-line-201335">a problem</a>.”') }
   end
 
