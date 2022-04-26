@@ -7,6 +7,7 @@ class Spaceholder < Roda
   DIMENSIONS_REGEXP = /#{DIMENSION_REGEXP}(?:x#{DIMENSION_REGEXP})?/
 
   # Routing plugins
+  plugin :head
   plugin :public
   plugin :status_handler
 
