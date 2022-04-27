@@ -54,11 +54,13 @@ class Spaceholder < Roda
     use Rack::CommonLogger
   end
 
+  # :nocov:
   configure :production do
     use Rack::Deflater
     use Rack::HostRedirect, %w[spaceholder-cc-web-5wn7nfxyaa-uc.a.run.app www.spaceholder.cc] => 'spaceholder.cc'
     use Rack::Static, urls: ['/assets'], root: 'public'
   end
+  # :nocov:
 
   route do |r|
     r.public
