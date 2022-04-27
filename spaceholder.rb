@@ -57,7 +57,7 @@ class Spaceholder < Roda
   # :nocov:
   configure :production do
     use Rack::Deflater
-    use Rack::HostRedirect, %w[spaceholder-cc-web-5wn7nfxyaa-uc.a.run.app www.spaceholder.cc] => 'spaceholder.cc'
+    use Rack::HostRedirect, [ENV.fetch('HOSTNAME'), 'www.spaceholder.cc'] => 'spaceholder.cc'
     use Rack::Static, urls: ['/assets'], root: 'public'
   end
   # :nocov:
