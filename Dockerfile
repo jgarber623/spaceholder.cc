@@ -24,9 +24,14 @@ COPY Gemfile Gemfile.lock ./
 ################################################################################
 FROM base-stage AS development
 
-ENV RACK_ENV=development
+ENV RACK_ENV=development \
+    BUNDLE_PATH=/usr/src/dependencies/bundler
 
 RUN apk add --no-cache --update g++ git make
+
+RUN mkdir -p /usr/src/dependencies
+
+VOLUME /usr/src/dependencies
 
 RUN bundle install
 

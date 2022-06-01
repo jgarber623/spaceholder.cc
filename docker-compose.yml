@@ -13,3 +13,5 @@ services:
         source: .
         target: /usr/src/app
         consistency: delegated
+      - type: volume
+        target: /usr/src/dependencies
