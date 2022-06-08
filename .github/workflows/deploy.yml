@@ -36,13 +36,13 @@ jobs:
           token_format: access_token
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
       - name: Authenticate to Google Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           registry: gcr.io
           username: oauth2accesstoken
           password: ${{ steps.gcloud-auth.outputs.access_token }}
       - name: Authenticate to GitHub Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
