@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'debug'
 require 'simplecov'
 
 ENV['RACK_ENV'] = 'test'
