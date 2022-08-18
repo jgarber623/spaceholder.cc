@@ -7,6 +7,12 @@ updates:
       interval: "weekly"
     assignees:
       - "jgarber623"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "jgarber623"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
