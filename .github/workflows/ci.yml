@@ -67,6 +67,6 @@ jobs:
           sudo apt install libvips
       - name: Run RSpec
         run: bundle exec rspec --format RSpec::Github::Formatter
-      - uses: paambaati/codeclimate-action@v3.0.0
+      - uses: paambaati/codeclimate-action@v3.1.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
