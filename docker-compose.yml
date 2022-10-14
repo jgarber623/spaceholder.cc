@@ -1,6 +1,6 @@
 services:
   web:
-    image: spaceholder-cc-web
+    image: jgarber623/spaceholder-cc-web
     build:
       context: .
       target: development

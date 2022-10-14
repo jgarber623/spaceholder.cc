@@ -4,8 +4,8 @@ set -e
 
 cmd=$*
 
-container_name="spaceholder-cc-web"
-container_id=$(docker ps --no-trunc --filter name=${container_name} --format {{.ID}})
+container_name="jgarber623/spaceholder-cc-web"
+container_id=$(docker ps --no-trunc --filter ancestor=${container_name} --format {{.ID}})
 
 if [ -z "$cmd" ]; then
   echo "[ bin/exec ] 🚨 No command specified!"
