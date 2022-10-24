@@ -15,3 +15,7 @@ services:
         consistency: delegated
       - type: volume
         target: /usr/src/dependencies
+
+networks:
+  default:
+    name: spaceholder-cc-network
