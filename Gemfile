@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 
 gem 'image_processing'
 gem 'puma'
-gem 'rack'
+gem 'rack', '>= 3.0.0'
 gem 'rack-host-redirect'
 gem 'rake'
 gem 'roda'
