@@ -15,6 +15,6 @@ RSpec.configure do |config|
   config.disable_monkey_patching!
 
   def app
-    Spaceholder.freeze.app
+    SpaceholderApp.freeze.app
   end
 end

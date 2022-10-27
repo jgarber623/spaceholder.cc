@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Spaceholder, roda: :app do
+RSpec.describe SpaceholderApp, roda: :app do
   describe 'HEAD /' do
     before { head '/' }
 

@@ -2,4 +2,4 @@
 
 require_relative 'config/environment'
 
-run Spaceholder.freeze.app
+run SpaceholderApp.freeze.app
