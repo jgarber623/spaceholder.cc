@@ -8,10 +8,10 @@ class SpaceholderApp < Roda
 
   # Routing plugins
   plugin :head
-  plugin :public
   plugin :status_handler
 
   # Rendering plugins
+  plugin :public
   plugin :render
 
   # Request/Response plugins
