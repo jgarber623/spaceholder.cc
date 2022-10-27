@@ -12,7 +12,7 @@ class SpaceholderApp < Roda
 
   # Rendering plugins
   plugin :public
-  plugin :render
+  plugin :render, engine: 'html.erb'
 
   # Request/Response plugins
   plugin :caching
