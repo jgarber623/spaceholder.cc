@@ -46,11 +46,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Run RuboCop
-        run: bundle exec rubocop --require code_scanning --format progress --format CodeScanning::SarifFormatter --out rubocop.sarif
-      - uses: github/codeql-action/upload-sarif@v2
-        if: ${{ always() }}
-        with:
-          sarif_file: rubocop.sarif
+        run: bundle exec rubocop
   test:
     name: Test
     runs-on: ubuntu-latest
