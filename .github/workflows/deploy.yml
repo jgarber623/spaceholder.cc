@@ -78,7 +78,7 @@ jobs:
         with:
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
-      - uses: google-github-actions/deploy-cloudrun@v0
+      - uses: google-github-actions/deploy-cloudrun@v1
         with:
           image: gcr.io/${{ env.GCP_PROJECT }}/${{ github.repository }}
           service: spaceholder-cc-web
