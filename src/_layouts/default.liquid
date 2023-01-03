@@ -13,25 +13,25 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@jgarber">
   <meta property="og:description" content="You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.">
-  <meta property="og:image" content="<%= asset_path 'spaceholder-180x180.png' %>">
+  <meta property="og:image" content="/assets/images/spaceholder-180x180.png">
   <meta property="og:title" content="SpaceHolder – A space-themed image placeholder service.">
 
-  <link rel="apple-touch-icon" href="<%= asset_path 'spaceholder-180x180.png' %>">
-  <link rel="shortcut icon" href="<%= asset_path 'spaceholder-180x180.png' %>">
+  <link rel="apple-touch-icon" href="/assets/images/spaceholder-180x180.png">
+  <link rel="shortcut icon" href="/assets/images/spaceholder-180x180.png">
 
-  <link rel="stylesheet" href="<%= asset_path 'application.css' %>">
+  <link rel="stylesheet" href="/assets/stylesheets/application.css">
   <link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css?family=Titillium+Web:300,900&display=swap">
 </head>
 <body>
 
   <header class="header" id="header" role="banner">
     <h1 class="logo">
-      <%= assets_environment['logo.svg'] %>
+      {% include "../assets/images/logo.svg" %}
     </h1>
   </header>
 
   <main class="content" role="main">
-    <%= yield %>
+    {{ content }}
   </main>
 
   <footer class="footer" role="contentinfo">
