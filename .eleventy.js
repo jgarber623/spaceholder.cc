@@ -4,7 +4,7 @@ module.exports = eleventyConfig => {
   eleventyConfig
     .addPassthroughCopy('./src/favicon.ico')
     .addPassthroughCopy('./src/robots.txt')
-    .addPassthroughCopy('./src/assets/images/spaceholder-180x180.png');
+    .addPassthroughCopy('./src/assets/images');
 
   return {
     dir: {
