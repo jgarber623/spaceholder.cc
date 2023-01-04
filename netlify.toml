@@ -4,6 +4,12 @@
   publish = "public"
 
 [[redirects]]
+  from   = "https://spaceholder-cc.netlify.app/*"
+  to     = "https://spaceholder.cc/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
   from = "/i"
   to = "/"
   status = 301
