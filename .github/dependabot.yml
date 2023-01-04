@@ -1,21 +1,21 @@
 version: 2
 
 updates:
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    assignees:
-      - "jgarber623"
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    assignees:
-      - "jgarber623"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    assignees:
+      - "jgarber623"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "jgarber623"
+  - package-ecosystem: "npm"
+    directory: "/google/cloud-functions/transform-image"
+    schedule:
+      interval: "monthly"
     assignees:
       - "jgarber623"
