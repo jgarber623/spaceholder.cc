@@ -2,6 +2,7 @@
 
 **A space-themed image placeholder service.**
 
+[![Deployment](https://img.shields.io/netlify/880d9662-da7f-4f3a-b883-4bed09ddbfec?logo=netlify&style=for-the-badge)](https://app.netlify.com/sites/spaceholder-cc/deploys)
 [![Build](https://img.shields.io/github/actions/workflow/status/jgarber623/spaceholder.cc/ci.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/jgarber623/spaceholder.cc/actions/workflows/ci.yml)
 [![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/jgarber623/spaceholder.cc.svg?logo=snyk&style=for-the-badge)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
