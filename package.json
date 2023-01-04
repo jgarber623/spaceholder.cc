@@ -12,7 +12,9 @@
     "lint": "eslint .",
     "prebuild": "npm run clean",
     "prestart": "npm run clean",
-    "start": "eleventy --quiet --serve"
+    "pretest": "npm run build",
+    "start": "eleventy --quiet --serve",
+    "test": "test -f ./public/index.html"
   },
   "devDependencies": {
     "@11ty/eleventy": "2.0.0-canary.23",
