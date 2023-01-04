@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "spaceholder.cc",
+  "homepage": "https://github.com/jgarber623/spaceholder.cc",
+  "bugs": "https://github.com/jgarber623/spaceholder.cc/issues",
+  "license": "MIT",
+  "author": "Jason Garber <jason@sixtwothree.org> (https://sixtwothree.org)",
+  "repository": "github.com:jgarber623/spaceholder.cc",
+  "scripts": {
+    "build": "eleventy --quiet",
+    "clean": "rm -rf public",
+    "lint": "eslint .",
+    "prebuild": "npm run clean",
+    "prestart": "npm run clean",
+    "pretest": "npm run build",
+    "start": "eleventy --quiet --serve",
+    "test": "test -f ./public/index.html"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "2.0.0-canary.23",
+    "@jgarber/eslint-config": "*",
+    "sass": "^1.57.1"
+  }
+}

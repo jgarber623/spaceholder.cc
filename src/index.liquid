@@ -1,0 +1,34 @@
+---
+layout: default.liquid
+---
+
+<h1>White space? Try real space.</h1>
+
+<div class="row">
+  <div class="col">
+    <p>You could settle for a basic grey box to show your placeholder images <em>or</em> you could substitute actual photos of the most gnarly places in the universe. We created SpaceHolder to help pull these amazing images straight from ESA/Hubble’s photo archives into your Web project.</p>
+  </div>
+  <div class="col">
+    <form action="/i" class="form" method="post">
+      <div class="form-field">
+        <label for="width">Width</label>
+        <input type="number" id="width" max="4000" min="1" name="width" value="800" required>
+      </div>
+
+      <div class="form-field">
+        <label for="height">Height</label>
+        <input type="number" id="height" max="4000" min="1" name="height" value="600" required>
+      </div>
+
+      <button type="submit">
+        <span>Launch</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<h2>Or use this format:</h2>
+
+<a href="/i/800/600" class="example">
+  <pre><code>&lt;img src="https://spaceholder.cc/i/800/600" alt="Space is awesome."&gt;</code></pre>
+</a>

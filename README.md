@@ -2,9 +2,8 @@
 
 **A space-themed image placeholder service.**
 
+[![Deployment](https://img.shields.io/netlify/880d9662-da7f-4f3a-b883-4bed09ddbfec?logo=netlify&style=for-the-badge)](https://app.netlify.com/sites/spaceholder-cc/deploys)
 [![Build](https://img.shields.io/github/actions/workflow/status/jgarber623/spaceholder.cc/ci.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/jgarber623/spaceholder.cc/actions/workflows/ci.yml)
-[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/spaceholder.cc.svg?logo=code-climate&style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc)
-[![Coverage](https://img.shields.io/codeclimate/c/jgarber623/spaceholder.cc.svg?logo=code-climate&style=for-the-badge)](https://codeclimate.com/github/jgarber623/spaceholder.cc/code)
 [![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/jgarber623/spaceholder.cc.svg?logo=snyk&style=for-the-badge)](https://snyk.io/test/github/jgarber623/spaceholder.cc)
 
 ## Usage
@@ -29,7 +28,7 @@ You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For
 
 ### Donations
 
-If diving into Ruby isn't your thing, but you'd still like to support SpaceHolder, consider making a donation! Any amount—large or small—is greatly appreciated. As a token of my gratitude, I'll add your name to the [Acknowledgments](#acknowledgments) below.
+If diving into code isn't your thing, but you'd still like to support SpaceHolder, consider making a donation! Any amount—large or small—is greatly appreciated. As a token of my gratitude, I'll add your name to the [Acknowledgments](#acknowledgments) below.
 
 [![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg?style=for-the-badge)](https://cash.me/$jgarber)
 [![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg?style=for-the-badge)](https://www.paypal.me/jgarber)
