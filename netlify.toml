@@ -3,6 +3,34 @@
   command = "eleventy --quiet --watch"
   publish = "public"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = """\
+      base-uri 'self'; \
+      block-all-mixed-content; \
+      child-src 'none'; \
+      default-src 'self'; \
+      font-src 'self' https://fonts.gstatic.com; \
+      form-action 'self'; \
+      frame-ancestors 'none'; \
+      frame-src 'none'; \
+      img-src 'self'; \
+      media-src 'self'; \
+      object-src 'none'; \
+      script-src 'self' 'unsafe-inline'; \
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; \
+      worker-src 'none';\
+    """
+    Referrer-Policy = "no-referrer-when-downgrade"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "0"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Content-Type = "image/x-icon"
+
 [[redirects]]
   from   = "https://spaceholder-cc.netlify.app/*"
   to     = "https://spaceholder.cc/:splat"
