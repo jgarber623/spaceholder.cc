@@ -22,17 +22,6 @@ If you'd like a square image, use a single number in the URL:
 <img src="https://spaceholder.cc/400" alt="This is an awesome square spaceholder!">
 ```
 
-## Improving SpaceHolder
-
-You want to help make SpaceHolder better? Hell yeah! I like your enthusiasm. For more on how you can help, check out [CONTRIBUTING.md](https://github.com/jgarber623/spaceholder.cc/blob/main/CONTRIBUTING.md).
-
-### Donations
-
-If diving into code isn't your thing, but you'd still like to support SpaceHolder, consider making a donation! Any amount—large or small—is greatly appreciated. As a token of my gratitude, I'll add your name to the [Acknowledgments](#acknowledgments) below.
-
-[![Donate via Square Cash](https://img.shields.io/badge/square%20cash-$jgarber-28c101.svg?style=for-the-badge)](https://cash.me/$jgarber)
-[![Donate via Paypal](https://img.shields.io/badge/paypal-jgarber-009cde.svg?style=for-the-badge)](https://www.paypal.me/jgarber)
-
 ## Acknowledgments
 
 Tip o' the hat to [Brad Frost](https://twitter.com/brad_frost) for [the inspiration](https://twitter.com/brad_frost/status/674668640915087360) and [Alex Rehberg](https://twitter.com/alex_rehberg) for [the name](https://twitter.com/alex_rehberg/status/674668731272794112). Many thanks to [Ste Grainer](https://twitter.com/stegrainer) for SpaceHolder's logo and visual design.
