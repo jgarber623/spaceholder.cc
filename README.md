@@ -1,4 +1,4 @@
-<img src="http://f.cl.ly/items/452R3n1k2P3U140j1A20/logo.svg" alt="SpaceHolder" width="50%">
+<img src="https://repository-images.githubusercontent.com/47727289/5a63ef3c-5e9b-4d0d-ae24-fd5ba415b32b" alt="SpaceHolder">
 
 **A space-themed image placeholder service.**
 
@@ -14,7 +14,7 @@ Jamming on a prototype? Cranking on buildout but you don't have content images f
 <img src="https://spaceholder.cc/400/300" alt="This is an awesome spaceholder!">
 ```
 
-Replace `400/300` with whatever pixel dimensions you like: `200/50`, `1200/400`, `240/240`. You'll be traveling the outer reaches so long as the format is a number, an `/`, and another number. For sanity's sake, both dimensions may be no larger than 4000.
+Replace `400/300` with whatever pixel dimensions you like: `200/50`, `1200/400`, `240/240`. You'll be traveling the outer reaches so long as the format is a number, an `/`, and another number. For sanity's sake, both dimensions may be no larger than `4000`.
 
 If you'd like a square image, use a single number in the URL:
 
