@@ -11,10 +11,10 @@
 Jamming on a prototype? Cranking on buildout but you don't have content images from your client yet? Drop the following in your markup and marvel at the wonders of the universe:
 
 ```html
-<img src="https://spaceholder.cc/400x300" alt="This is an awesome spaceholder!">
+<img src="https://spaceholder.cc/400/300" alt="This is an awesome spaceholder!">
 ```
 
-Replace `400x300` with whatever pixel dimensions you like: `200x50`, `1200x400`, `240x240`. You'll be traveling the outer reaches so long as the format is a number, an `x` (the letter "x"), and another number. For sanity's sake, both dimensions may be no larger than 4000.
+Replace `400/300` with whatever pixel dimensions you like: `200/50`, `1200/400`, `240/240`. You'll be traveling the outer reaches so long as the format is a number, an `/`, and another number. For sanity's sake, both dimensions may be no larger than 4000.
 
 If you'd like a square image, use a single number in the URL:
 
