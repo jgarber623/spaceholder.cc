@@ -19,6 +19,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@jgarber/eslint-config": "*",
-    "sass": "^1.59.2"
+    "sass": "^1.59.3"
   }
 }
