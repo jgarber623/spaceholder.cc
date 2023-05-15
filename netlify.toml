@@ -27,8 +27,14 @@
     X-XSS-Protection = "0"
 
 [[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[headers]]
   for = "/favicon.ico"
   [headers.values]
+    Cache-Control = "public, s-max-age=604800"
     Content-Type = "image/x-icon"
 
 [[redirects]]
