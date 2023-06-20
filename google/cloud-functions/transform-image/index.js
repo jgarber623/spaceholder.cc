@@ -33,12 +33,14 @@ functions.http('transformImage', async (request, response) => {
   console.log(requestId, 'Randomly selected file:', file.name);
 
   // Load that object into memory
-  // Note: `contents` returns as a single-element Array
-  const contents = await storage.bucket(GCP_BUCKET_NAME).file(file.name).download();
+  //
+  // Notes:
+  //   - `download()` returns a single-element Array
+  //   - `contents` is a Buffer
+  const [contents] = await storage.bucket(GCP_BUCKET_NAME).file(file.name).download();
 
   // Resize and transform the object and return a Buffer
-  // Note: `contents[0]` is a Buffer
-  const data = await sharp(contents[0])
+  const data = await sharp(contents)
     .resize(width, height)
     .jpeg({
       progressive: true,
