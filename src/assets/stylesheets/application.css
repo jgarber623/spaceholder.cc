@@ -98,7 +98,7 @@ input {
 .row {
   margin: 1.5em 0 3em 0;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -110,7 +110,7 @@ input {
     margin-top: 3em;
   }
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     width: 46%;
 
     + .col {
@@ -135,7 +135,7 @@ input {
     margin-bottom: 0.5em;
   }
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     h1 {
       font-size: 4.5em;
     }
