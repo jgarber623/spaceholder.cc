@@ -96,7 +96,7 @@ input {
 }
 
 .row {
-  margin: 1.5em 0 3em 0;
+  margin: 1.5em 0 3em;
 
   @media (width >= 48em) {
     display: flex;
@@ -241,5 +241,5 @@ input {
 .footer {
   margin: 0 auto;
   max-width: 60em;
-  padding: 0 1em 3em 1em;
+  padding: 0 1em 3em;
 }
