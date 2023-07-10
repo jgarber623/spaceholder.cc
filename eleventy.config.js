@@ -1,4 +1,4 @@
-module.exports = eleventyConfig => {
+module.exports = function(eleventyConfig) {
   // Passthrough File Copy
   eleventyConfig
     .addPassthroughCopy('./src/*.{ico,txt}')
