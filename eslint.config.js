@@ -4,7 +4,6 @@ const globals = require('globals');
 module.exports = [
   ...config,
   {
-    files: ['**/*.js'],
     languageOptions: {
       globals: {
         ...globals.node
