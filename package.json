@@ -19,6 +19,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@jgarber/eslint-config": "^0.2.0",
-    "sass": "^1.63.6"
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.25",
+    "postcss-nesting": "^12.0.0"
   }
 }

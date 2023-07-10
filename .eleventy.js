@@ -1,17 +1,17 @@
 module.exports = eleventyConfig => {
-  eleventyConfig.addPlugin(require('./lib/plugins/sass.js'));
-
+  // Passthrough File Copy
   eleventyConfig
     .addPassthroughCopy('./src/*.{ico,txt}')
     .addPassthroughCopy('./src/assets/images');
+
+  // Plugins
+  eleventyConfig.addPlugin(require('./lib/plugins/postcss.js'));
 
   return {
     dir: {
       input: './src',
       layouts: '_layouts',
       output: './public'
-    },
-
-    templateFormats: ['css', 'liquid']
+    }
   };
 };
