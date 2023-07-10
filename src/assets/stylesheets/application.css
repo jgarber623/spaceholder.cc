@@ -1,3 +1,4 @@
+/* stylelint-disable-next-line at-rule-no-vendor-prefix */
 @-ms-viewport {
   width: device-width;
 }
@@ -9,8 +10,6 @@
 }
 
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
   background-color: #252c32;
   box-sizing: border-box;
   color: #fff;
@@ -57,7 +56,6 @@ input {
   font: inherit;
   margin: 0;
 
-  &::-moz-focus-inner,
   &::-moz-focus-inner {
     border: 0;
     padding: 0;
@@ -65,7 +63,6 @@ input {
 }
 
 button {
-  -webkit-appearance: button;
   cursor: pointer;
   overflow: visible;
   text-transform: none;
@@ -226,7 +223,7 @@ input {
 }
 
 .example {
-  background-color: rgba(#fff, 0.25);
+  background-color: rgb(255 255 255 / 25%);
   border-radius: 0.25em;
   display: block;
   text-align: center;
@@ -234,7 +231,7 @@ input {
 
   &:focus,
   &:hover {
-    background-color: rgba(#fff, 0.15);
+    background-color: rgb(255 255 255 / 15%);
   }
 }
 
