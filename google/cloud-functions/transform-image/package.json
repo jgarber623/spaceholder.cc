@@ -2,8 +2,7 @@
   "private": "true",
   "name": "transform-image",
   "scripts": {
-    "start": "functions-framework --port 9090 --target transformImage",
-    "test": "eslint ."
+    "start": "functions-framework --port 9090 --target transformImage"
   },
   "engines": {
     "node": ">=18.0.0"
