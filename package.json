@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@jgarber/eslint-config": "^1.1.0",
+    "@jgarber/eslint-config": "^1.1.1",
     "@jgarber/stylelint-config": "^1.0.0",
     "cssnano": "^6.0.1",
     "globals": "^13.20.0",
