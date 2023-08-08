@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="{{ app.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% capture title %}{{ app.name | append: " – A space-themed image placeholder service." }}{% endcapture -%}
+
+  <title>{{ title }}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="/assets/stylesheets/application.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:300,900&display=swap">
+
+  <link rel="preload" href="/assets/stylesheets/application.css" as="style">
+
+  <link rel="apple-touch-icon" href="{{ app.icons[0].src }}">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="shortcut icon" href="{{ app.icons[0].src }}">
+
+  <meta name="apple-mobile-web-app-title" content="{{ app.name }}">
+  <meta name="application-name" content="{{ app.name }}">
+  <meta name="description" content="{{ app.description }}">
+  <meta name="theme-color" content="{{ app.theme_color }}">
+
+  <meta property="og:author_name" content="{{ pkg.author.name }}">
+  <meta property="og:author_url" content="{{ pkg.author.url }}">
+  <meta property="og:blurhash" content="LRF5my^m0KIT9ZRP$%xu8^RiyDW?">
+  <meta property="og:description" content="{{ app.description }}">
+  <meta property="og:image" content="{{ app.start_url }}/assets/images/spaceholder-1200x630.jpg">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:url" content="{{ app.start_url }}">
+</head>
+<body>
+
+  <header class="header" id="header" role="banner">
+    <h1 class="logo h-x-app">
+      <a href="/" class="p-name u-url" rel="home">
+        {% include "../assets/images/logo.svg" %}
+      </a>
+    </h1>
+  </header>
+
+  <main class="content" role="main">
+    {{ content }}
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>{{ app.name }} is freely available under the <a href="https://opensource.org/licenses/MIT" rel="license">MIT License</a>. Source code is available on <a href="{{ pkg.repository.url }}" rel="source">GitHub</a>.</p>
+  </footer>
+
+  <script type="module">
+    document.querySelector('#header').style.backgroundImage = 'url("/i/1200/400")';
+  </script>
+
+</body>
+</html>
