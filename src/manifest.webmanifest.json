@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "background_color": "#252c32",
+  "description": "You could settle for a basic grey box to show your placeholder images or you could substitute actual photos of the most gnarly places in the universe.",
+  "icons": [
+    {
+      "src": "/assets/images/spaceholder-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-US",
+  "name": "SpaceHolder",
+  "short_name": "SpaceHolder",
+  "start_url": "https://spaceholder.cc",
+  "theme_color": "#252c32"
+}
