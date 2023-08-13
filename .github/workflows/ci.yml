@@ -1,6 +1,6 @@
 name: CI
 
-on: push
+on: [pull_request, push, workflow_dispatch]
 
 jobs:
   lint:
@@ -25,3 +25,31 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+  deploy:
+    name: Deploy to Cloudflare Pages
+    permissions:
+      contents: read
+      deployments: write
+    needs:
+      - lint
+      - test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-20.04
+    environment:
+      name: spaceholder-cc (Production)
+      url: https://spaceholder.cc
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: cloudflare/pages-action@v1
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          directory: _site
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: spaceholder-cc
