@@ -2,7 +2,7 @@
 
 **A space-themed image placeholder service.**
 
-[![Deployment](https://img.shields.io/netlify/880d9662-da7f-4f3a-b883-4bed09ddbfec?logo=netlify&style=for-the-badge)](https://app.netlify.com/sites/spaceholder-cc/deploys)
+[![Deployment](https://img.shields.io/github/deployments/jgarber623/spaceholder.cc/spaceholder-cc%20%28Production%29?label=Deployment&logo=github&style=for-the-badge)](https://github.com/jgarber623/spaceholder.cc/deployments/activity_log?environment=spaceholder-cc+%28Production%29)
 [![Build](https://img.shields.io/github/actions/workflow/status/jgarber623/spaceholder.cc/ci.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/jgarber623/spaceholder.cc/actions/workflows/ci.yml)
 
 ## Usage
@@ -10,7 +10,7 @@
 Jamming on a prototype? Cranking on buildout but you don't have content images from your client yet? Drop the following in your markup and marvel at the wonders of the universe:
 
 ```html
-<img src="https://spaceholder.cc/i/400/300" alt="This is an awesome spaceholder!">
+<img src="https://spaceholder.cc/i/400x300" alt="This is an awesome spaceholder!">
 ```
 
 Replace `400/300` with whatever pixel dimensions you like: `200/50`, `1200/400`, `240/240`. You'll be traveling the outer reaches so long as the format is a number, a `/`, and another number. For sanity's sake, both dimensions may be no larger than `4000`.
