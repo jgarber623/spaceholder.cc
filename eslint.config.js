@@ -11,7 +11,7 @@ module.exports = [
     }
   },
   {
-    files: ['netlify/**/*.js'],
+    files: ['functions/**/*.js'],
     languageOptions: {
       sourceType: 'module'
     }
