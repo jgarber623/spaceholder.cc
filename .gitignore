@@ -1,2 +1,3 @@
 _site/
+.dev.vars
 node_modules/
