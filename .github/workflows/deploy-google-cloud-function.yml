@@ -28,7 +28,8 @@ jobs:
       - uses: google-github-actions/setup-gcloud@v1
         with:
           version: ">= 363.0.0"
-      - name: Deploy 2nd generation Google Cloud Function
+      - name: Deploy 2nd generation Cloud Function
+        id: deploy
         run: |
           gcloud functions deploy nodejs-http-trigger \
             --region=us-central1 \
@@ -41,4 +42,8 @@ jobs:
             --set-env-vars=GCP_BUCKET_NAME=${{ secrets.GCP_BUCKET_NAME }} \
             --max-instances=100 \
             --trigger-http
-        working-directory: ./google/cloud-functions/transform-image
+          echo "uri=$(gcloud functions describe nodejs-http-trigger --gen2 --project=${{ secrets.GCP_PROJECT_ID }} --region=us-central1 --format="value(serviceConfig.uri)")" >> $GITHUB_OUTPUT
+        working-directory: "./google/cloud-functions/transform-image"
+      - name: Test deployed Cloud Function
+        run: |
+          wget --post-data "width=800&height=600" --quiet --server-response --output-document - ${{ steps.deploy.outputs.uri }} 2>&1 | grep "content-type: image/jpeg"
