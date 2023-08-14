@@ -36,8 +36,9 @@ jobs:
             --gen2
             --memory=1GiB
             --runtime=nodejs18
-            --source=google/cloud-functions/transform-image
+            --source=.
             --timeout=30
             --set-env-vars=GCP_BUCKET_NAME=${{ secrets.GCP_BUCKET_NAME }}
             --max-instances=100
             --trigger-http
+        working-directory: ./google/cloud-functions/transform-image
