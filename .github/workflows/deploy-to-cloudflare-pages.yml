@@ -1,0 +1,39 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "google/**"
+  workflow_dispatch:
+    branches: [main]
+
+jobs:
+  ci:
+    name: CI
+    uses: "./.github/workflows/ci.yml"
+  deploy:
+    name: Deploy to Cloudflare Pages
+    permissions:
+      contents: read
+      deployments: write
+    needs: ci
+    runs-on: ubuntu-20.04
+    environment:
+      name: spaceholder-cc (Production)
+      url: https://spaceholder.cc
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: cloudflare/pages-action@v1
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          directory: _site
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: spaceholder-cc
