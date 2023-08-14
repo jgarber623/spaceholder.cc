@@ -29,16 +29,16 @@ jobs:
         with:
           version: ">= 363.0.0"
       - name: Deploy 2nd generation Google Cloud Function
-        run: >
-          gcloud functions deploy nodejs-http-trigger
-            --region=us-central1
-            --entry-point=transformImage
-            --gen2
-            --memory=1GiB
-            --runtime=nodejs18
-            --source=.
-            --timeout=30
-            --set-env-vars=GCP_BUCKET_NAME=${{ secrets.GCP_BUCKET_NAME }}
-            --max-instances=100
+        run: |
+          gcloud functions deploy nodejs-http-trigger \
+            --region=us-central1 \
+            --entry-point=transformImage \
+            --gen2 \
+            --memory=1GiB \
+            --runtime=nodejs18 \
+            --source=. \
+            --timeout=30 \
+            --set-env-vars=GCP_BUCKET_NAME=${{ secrets.GCP_BUCKET_NAME }} \
+            --max-instances=100 \
             --trigger-http
         working-directory: ./google/cloud-functions/transform-image
