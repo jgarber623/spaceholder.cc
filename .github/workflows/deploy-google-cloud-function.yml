@@ -1,0 +1,43 @@
+name: Deploy Google Cloud Function
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "google/**"
+  workflow_dispatch:
+    branches: [main]
+
+jobs:
+  ci:
+    name: CI
+    uses: "./.github/workflows/ci.yml"
+  deploy:
+    name: Deploy
+    permissions:
+      contents: read
+      id-token: write
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: google-github-actions/auth@v1
+        with:
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+      - uses: google-github-actions/setup-gcloud@v1
+        with:
+          version: ">= 363.0.0"
+      - name: Deploy 2nd generation Google Cloud Function
+        run: >
+          gcloud functions deploy nodejs-http-trigger
+            --region=us-central1
+            --entry-point=transformImage
+            --gen2
+            --memory=1GiB
+            --runtime=nodejs18
+            --source=google/cloud-functions/transform-image
+            --timeout=30
+            --set-env-vars=GCP_BUCKET_NAME=${{ secrets.GCP_BUCKET_NAME }}
+            --max-instances=100
+            --trigger-http
