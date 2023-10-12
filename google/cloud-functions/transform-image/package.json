@@ -7,9 +7,9 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "dependencies": {
+  "devDependencies": {
     "@google-cloud/functions-framework": "^3.3.0",
-    "@google-cloud/storage": "^7.0.1",
-    "sharp": "^0.32.5"
+    "@google-cloud/storage": "^7.2.0",
+    "sharp": "^0.32.6"
   }
 }
