@@ -16,10 +16,10 @@ functions.http('transformImage', async (request, response) => {
 
   let { width, height = width } = request.body;
 
-  width = parseInt(width, 10);
-  height = parseInt(height, 10);
+  width = Number.parseInt(width, 10);
+  height = Number.parseInt(height, 10);
 
-  if (isNaN(width) || isNaN(height) || width > 4000 || height > 4000) {
+  if (Number.isNaN(width) || Number.isNaN(height) || width > 4000 || height > 4000) {
     return response.status(400).end();
   }
 
