@@ -6,8 +6,8 @@ module.exports = [
     files: ['functions/**/*.js'],
     languageOptions: {
       globals: {
-        Response: 'readonly',
-        fetch: 'readonly'
+        fetch: 'readonly',
+        Response: 'readonly'
       },
       sourceType: 'module'
     },
