@@ -36,7 +36,7 @@ jobs:
             --entry-point=transformImage \
             --gen2 \
             --memory=1GiB \
-            --runtime=nodejs18 \
+            --runtime=nodejs20 \
             --source=. \
             --timeout=30 \
             --set-env-vars=GCP_BUCKET_NAME=${{ secrets.GCP_BUCKET_NAME }} \
