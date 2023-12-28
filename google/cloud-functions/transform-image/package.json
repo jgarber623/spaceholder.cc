@@ -5,7 +5,7 @@
     "start": "functions-framework --port 9090 --target transformImage"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.3.0",
