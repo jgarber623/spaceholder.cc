@@ -25,7 +25,7 @@
     "test": "test -f ./_site/index.html"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-alpha.4",
     "@jgarber/eslint-config": "^3.0.0",
     "@jgarber/stylelint-config": "^3.0.1",
     "cssnano": "^6.0.3",
