@@ -9,6 +9,7 @@
     "email": "jason@sixtwothree.org",
     "url": "https://sixtwothree.org"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/jgarber623/spaceholder.cc"
