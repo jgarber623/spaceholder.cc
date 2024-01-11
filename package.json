@@ -10,10 +10,7 @@
     "url": "https://sixtwothree.org"
   },
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jgarber623/spaceholder.cc"
-  },
+  "repository": "github:jgarber623/spaceholder.cc",
   "scripts": {
     "build": "eleventy --quiet",
     "clean": "rm -rf public",
@@ -27,10 +24,10 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.4",
+    "@jgarber/eleventy-plugin-postcss": "^0.2.0",
     "@jgarber/eslint-config": "^3.0.0",
     "@jgarber/stylelint-config": "^3.0.1",
     "cssnano": "^6.0.3",
-    "postcss": "^8.4.33",
     "postcss-nesting": "^12.0.2"
   }
 }
