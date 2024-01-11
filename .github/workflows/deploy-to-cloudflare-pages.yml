@@ -6,7 +6,6 @@ on:
     paths-ignore:
       - "google/**"
   workflow_dispatch:
-    branches: [main]
 
 jobs:
   ci:
