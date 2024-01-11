@@ -1,18 +1,20 @@
-const config = require('@jgarber/eslint-config');
+import config from '@jgarber/eslint-config';
 
-module.exports = [
+export default [
   ...config,
   {
     files: ['functions/**/*.js'],
-    languageOptions: {
-      globals: {
-        fetch: 'readonly',
-        Response: 'readonly'
-      },
-      sourceType: 'module'
-    },
     rules: {
       'jsdoc/no-undefined-types': ['error', { definedTypes: ['EventContext'] }]
+    }
+  },
+  {
+    files: ['google/**/*.js'],
+    languageOptions: {
+      globals: {
+        require: 'readonly'
+      },
+      sourceType: 'commonjs'
     }
   }
 ];
