@@ -17,7 +17,7 @@ jobs:
       contents: read
       deployments: write
     needs: ci
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     environment:
       name: spaceholder-cc (Production)
       url: https://spaceholder.cc
