@@ -1,3 +1,3 @@
 export default {
-  extends: '@jgarber/stylelint-config'
+  extends: "@jgarber/stylelint-config",
 };

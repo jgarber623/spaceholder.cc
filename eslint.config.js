@@ -1,20 +1,20 @@
-import config from '@jgarber/eslint-config';
+import config from "@jgarber/eslint-config";
 
 export default [
   ...config,
   {
-    files: ['functions/**/*.js'],
+    files: ["functions/**/*.js"],
     rules: {
-      'jsdoc/no-undefined-types': ['error', { definedTypes: ['EventContext'] }]
-    }
+      "jsdoc/no-undefined-types": ["error", { definedTypes: ["EventContext"] }],
+    },
   },
   {
-    files: ['google/**/*.js'],
+    files: ["google/**/*.js"],
     languageOptions: {
       globals: {
-        require: 'readonly'
+        require: "readonly",
       },
-      sourceType: 'commonjs'
-    }
-  }
+      sourceType: "commonjs",
+    },
+  },
 ];

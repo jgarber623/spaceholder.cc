@@ -5,14 +5,12 @@
  * either a single `width` integer or a combined `width` and `height` string
  * joined by an `x`.
  *
- * @see {@link https://developers.cloudflare.com/pages/platform/functions/api-reference/}
- *
  * @param {EventContext} context An EventContext instance.
- *
  * @returns {Response} Most likely a 302 redirect.
+ * @see {@link https://developers.cloudflare.com/pages/platform/functions/api-reference/}
  */
 export async function onRequestGet(context) {
-  let [width, height = width] = context.params.dimensions.split('x');
+  let [width, height = width] = context.params.dimensions.split("x");
 
   width = Number.parseInt(width, 10);
   height = Number.parseInt(height, 10);
@@ -24,15 +22,15 @@ export async function onRequestGet(context) {
   const response = await fetch(context.env.GCP_CLOUD_FUNCTION_URL, {
     body: new URLSearchParams({ height, width }),
     headers: {
-      'content-type': 'application/x-www-form-urlencoded'
+      "content-type": "application/x-www-form-urlencoded",
     },
-    method: 'POST'
+    method: "POST",
   });
 
   return new Response(await response.blob(), {
     headers: {
-      'cache-control': 'public, max-age=3600',
-      'content-type': 'image/jpeg'
-    }
+      "cache-control": "public, max-age=3600",
+      "content-type": "image/jpeg",
+    },
   });
 }
