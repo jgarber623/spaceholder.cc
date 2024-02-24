@@ -23,7 +23,7 @@
     "test": "test -f ./_site/index.html"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.4",
+    "@11ty/eleventy": "3.0.0-alpha.5",
     "@jgarber/eleventy-plugin-postcss": "^0.3.3",
     "@jgarber/eslint-config": "^4.2.1",
     "@jgarber/stylelint-config": "^4.0.0",
