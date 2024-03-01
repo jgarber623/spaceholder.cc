@@ -25,9 +25,9 @@
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.5",
     "@jgarber/eleventy-plugin-postcss": "^0.3.3",
-    "@jgarber/eslint-config": "^4.2.1",
+    "@jgarber/eslint-config": "^4.3.0",
     "@jgarber/stylelint-config": "^4.0.0",
-    "cssnano": "^6.0.4",
-    "postcss-nesting": "^12.0.3"
+    "cssnano": "^6.0.5",
+    "postcss-nesting": "^12.0.4"
   }
 }
