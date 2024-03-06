@@ -17,8 +17,6 @@ jobs:
           node-version-file: ".nvmrc"
           cache: npm
       - run: npm ci
-      - run: npm ci
-        working-directory: "./google/cloud-functions/transform-image"
       - run: npm run lint
   test:
     name: Test files
