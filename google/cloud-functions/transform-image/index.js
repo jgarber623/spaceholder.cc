@@ -4,9 +4,6 @@ import sharp from "sharp";
 const { GCP_BUCKET_NAME } = process.env;
 
 export const transformImage = async (request, response) => {
-
-  console.log(sharp);
-
   if (request.method !== "POST") {
     return response.set("allow", "POST").status(405).end();
   }
