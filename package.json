@@ -22,7 +22,7 @@
     "prewrangle": "npm run build",
     "start": "npm run build -- --serve",
     "test": "test -f ./_site/index.html",
-    "wrangle": "npx wrangler pages dev _site"
+    "wrangle": "npx wrangler pages dev _site  --compatibility-date=2024-03-04 --compatibility-flags=nodejs_compat"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.5",
