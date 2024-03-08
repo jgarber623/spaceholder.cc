@@ -3,7 +3,7 @@
   "name": "transform-image",
   "type": "module",
   "scripts": {
-    "start": "functions-framework --port 9090 --target transformImage"
+    "start": "npx @google-cloud/functions-framework --port 9090 --target transformImage"
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.3.0",
