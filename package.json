@@ -19,8 +19,10 @@
     "lint:js": "npx eslint .",
     "prebuild": "npm run clean",
     "pretest": "npm run build",
+    "prewrangle": "npm run build",
     "start": "npm run build -- --serve",
-    "test": "test -f ./_site/index.html"
+    "test": "test -f ./_site/index.html",
+    "wrangle": "npx wrangler pages dev _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.5",
@@ -28,6 +30,7 @@
     "@jgarber/eslint-config": "^4.3.0",
     "@jgarber/stylelint-config": "^4.0.0",
     "cssnano": "^6.1.0",
-    "postcss-nesting": "^12.1.0"
+    "postcss-nesting": "^12.1.0",
+    "wrangler": "^3.32.0"
   }
 }
