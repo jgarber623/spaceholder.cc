@@ -1,6 +1,7 @@
 {
   "private": "true",
   "name": "transform-image",
+  "type": "module",
   "scripts": {
     "start": "functions-framework --port 9090 --target transformImage"
   },

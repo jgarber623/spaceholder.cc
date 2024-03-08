@@ -1,11 +1,12 @@
-const functions = require("@google-cloud/functions-framework");
-const { Storage } = require("@google-cloud/storage");
-
-const sharp = require("sharp");
+import { Storage } from "@google-cloud/storage";
+import sharp from "sharp";
 
 const { GCP_BUCKET_NAME } = process.env;
 
-functions.http("transformImage", async (request, response) => {
+export const transformImage = async (request, response) => {
+
+  console.log(sharp);
+
   if (request.method !== "POST") {
     return response.set("allow", "POST").status(405).end();
   }
@@ -56,4 +57,4 @@ functions.http("transformImage", async (request, response) => {
       "content-type": "image/jpeg",
     })
     .send(data);
-});
+};
