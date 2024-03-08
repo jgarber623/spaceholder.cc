@@ -28,6 +28,6 @@
     "@jgarber/eslint-config": "^4.3.0",
     "@jgarber/stylelint-config": "^4.0.0",
     "cssnano": "^6.1.0",
-    "postcss-nesting": "^12.0.4"
+    "postcss-nesting": "^12.1.0"
   }
 }
