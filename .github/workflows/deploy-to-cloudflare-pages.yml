@@ -36,3 +36,4 @@ jobs:
           directory: _site
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           projectName: spaceholder-cc
+          wranglerVersion: 3
