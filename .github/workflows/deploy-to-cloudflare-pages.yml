@@ -3,6 +3,8 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "google/**"
   workflow_dispatch:
 
 jobs:

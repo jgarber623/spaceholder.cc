@@ -19,25 +19,13 @@ export async function onRequestGet(context) {
     return await context.next();
   }
 
-  const candidates = [
-    "heic0406a.jpg",
-    "heic0604a.jpg",
-    "heic0910i.jpg",
-    "heic1011a.jpg",
-    "heic1302a.jpg",
-    "heic1501a.jpg",
-    "heic1509a.jpg",
-    "heic1608a.jpg",
-    "heic1808a.jpg",
-  ];
-
-  const fit = "cover";
-  const quality = 60;
-  const url = candidates[Math.floor(Math.random() * candidates.length)];
-
-  const params = new URLSearchParams({ fit, height, quality, url, width });
-
-  const response = await fetch(`${context.env.NETLIFY_IMAGE_CDN_URL}?${params}`);
+  const response = await fetch(context.env.GCP_CLOUD_FUNCTION_URL, {
+    body: new URLSearchParams({ height, width }),
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+    },
+    method: "POST",
+  });
 
   return new Response(await response.blob(), {
     headers: {

@@ -13,3 +13,9 @@ updates:
       interval: "monthly"
     assignees:
       - "jgarber623"
+  - package-ecosystem: "npm"
+    directory: "/google/cloud-functions/transform-image"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "jgarber623"
