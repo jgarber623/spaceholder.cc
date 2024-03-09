@@ -19,18 +19,16 @@ export async function onRequestGet(context) {
     return await context.next();
   }
 
-  const response = await fetch(context.env.GCP_CLOUD_FUNCTION_URL, {
+  /**
+   * Act as a proxy to the origin server's response (which should be a Blob).
+   *
+   * @see {@link https://blog.cloudflare.com/workers-optimization-reduces-your-bill}
+   */
+  return await fetch(context.env.GCP_CLOUD_FUNCTION_URL, {
     body: new URLSearchParams({ height, width }),
     headers: {
       "content-type": "application/x-www-form-urlencoded",
     },
     method: "POST",
-  });
-
-  return new Response(await response.blob(), {
-    headers: {
-      "cache-control": "public, max-age=3600",
-      "content-type": "image/jpeg",
-    },
   });
 }
