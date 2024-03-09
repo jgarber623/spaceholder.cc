@@ -3,6 +3,16 @@ import sharp from "sharp";
 
 const { GCP_BUCKET_NAME } = process.env;
 
+/**
+ * A Google Cloud Functions HTTP function that returns a random image resized
+ * and cropped to the supplied width and height..
+ *
+ * @param {Request} request An Express Request object.
+ * @param {Response} response An Express Response object.
+ * @returns {Response} Most likely a Blob.
+ * @see {@link https://expressjs.com/en/4x/api.html#req}
+ * @see {@link https://expressjs.com/en/4x/api.html#res}
+ */
 export const transformImage = async (request, response) => {
   if (request.method !== "POST") {
     return response.set("allow", "POST").status(405).end();

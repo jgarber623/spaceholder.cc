@@ -6,7 +6,7 @@
  * joined by an `x`.
  *
  * @param {EventContext} context An EventContext instance.
- * @returns {Response} Most likely a 302 redirect.
+ * @returns {Response} Most likely a Blob.
  * @see {@link https://developers.cloudflare.com/pages/platform/functions/api-reference/}
  */
 export async function onRequestGet(context) {
