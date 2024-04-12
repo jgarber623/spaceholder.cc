@@ -1,6 +1,3 @@
-import { Storage } from "@google-cloud/storage";
-import sharp from "sharp";
-
 const { GCP_BUCKET_NAME } = process.env;
 
 /**
@@ -33,6 +30,8 @@ export const transformImage = async (request, response) => {
 
   console.log("Generating transform with dimensions:", width, height);
 
+  const { Storage } = await import("@google-cloud/storage");
+
   // Retrieve a list of all objects in the bucket
   const storage = new Storage();
   const [files] = await storage.bucket(GCP_BUCKET_NAME).getFiles();
@@ -48,6 +47,8 @@ export const transformImage = async (request, response) => {
   //   - `download()` returns a single-element Array
   //   - `contents` is a Buffer
   const [contents] = await storage.bucket(GCP_BUCKET_NAME).file(file.name).download();
+
+  const { default: sharp } = await import("sharp");
 
   // Resize and transform the object and return a Buffer
   const data = await sharp(contents)
