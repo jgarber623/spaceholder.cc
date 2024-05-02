@@ -29,7 +29,7 @@
     "@jgarber/eleventy-plugin-postcss": "^0.3.3",
     "@jgarber/eslint-config": "^4.3.0",
     "@jgarber/stylelint-config": "^4.0.0",
-    "cssnano": "^6.1.2",
+    "cssnano": "^7.0.1",
     "postcss-nesting": "^12.1.1",
     "wrangler": "^3.48.0"
   }
