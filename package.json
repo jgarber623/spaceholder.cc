@@ -31,6 +31,6 @@
     "@jgarber/stylelint-config": "^4.0.0",
     "cssnano": "^7.0.1",
     "postcss-nesting": "^12.1.2",
-    "wrangler": "^3.48.0"
+    "wrangler": "^3.53.1"
   }
 }
