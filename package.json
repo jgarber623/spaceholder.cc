@@ -22,15 +22,15 @@
     "prewrangle": "npm run build",
     "start": "npm run build -- --serve",
     "test": "test -f ./_site/index.html",
-    "wrangle": "npx wrangler pages dev _site  --compatibility-date=2024-03-04 --compatibility-flags=nodejs_compat"
+    "wrangle": "npx wrangler pages dev _site --compatibility-date=2024-03-04 --compatibility-flags=nodejs_compat"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.10",
-    "@jgarber/eleventy-plugin-postcss": "^0.3.3",
+    "@11ty/eleventy": "3.0.0-alpha.13",
+    "@jgarber/eleventy-plugin-postcss": "^0.4.0",
     "@jgarber/eslint-config": "^5.0.0",
     "@jgarber/stylelint-config": "^4.0.0",
-    "cssnano": "^7.0.1",
+    "cssnano": "^7.0.3",
     "postcss-nesting": "^12.1.5",
-    "wrangler": "^3.58.0"
+    "wrangler": "^3.62.0"
   }
 }
