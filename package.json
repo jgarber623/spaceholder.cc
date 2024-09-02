@@ -30,7 +30,7 @@
     "@jgarber/eslint-config": "^6.1.0",
     "@jgarber/stylelint-config": "^4.0.0",
     "cssnano": "^7.0.5",
-    "postcss-nesting": "^12.1.5",
+    "postcss-nesting": "^13.0.0",
     "wrangler": "^3.68.0"
   },
   "engines": {
