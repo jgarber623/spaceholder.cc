@@ -6,7 +6,7 @@
     "start": "npx @google-cloud/functions-framework --port 9090 --target transformImage"
   },
   "dependencies": {
-    "@google-cloud/functions-framework": "^3.4.2",
+    "@google-cloud/functions-framework": "^3.4.4",
     "@google-cloud/storage": "^7.14.0",
     "sharp": "^0.33.5"
   },
