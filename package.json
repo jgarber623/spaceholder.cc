@@ -10,7 +10,7 @@
     "url": "https://sixtwothree.org"
   },
   "type": "module",
-  "repository": "github:jgarber623/spaceholder.cc",
+  "repository": "https://github.com/jgarber623/spaceholder.cc",
   "scripts": {
     "build": "npx @11ty/eleventy --quiet",
     "lint": "npm run lint:css && npm run lint:js",
