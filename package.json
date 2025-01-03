@@ -13,11 +13,9 @@
   "repository": "github:jgarber623/spaceholder.cc",
   "scripts": {
     "build": "npx @11ty/eleventy --quiet",
-    "clean": "rm -rf _site",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "npx stylelint ./src/**/*.css",
     "lint:js": "npx eslint .",
-    "prebuild": "npm run clean",
     "pretest": "npm run build",
     "prewrangle": "npm run build",
     "start": "npm run build -- --serve",
@@ -27,13 +25,13 @@
   "devDependencies": {
     "@11ty/eleventy": "3.0.0",
     "@jgarber/eleventy-plugin-postcss": "^1.0.1",
-    "@jgarber/eslint-config": "^6.1.0",
-    "@jgarber/stylelint-config": "^4.0.0",
+    "@jgarber/eslint-config": "^7.0.0",
+    "@jgarber/stylelint-config": "^5.0.0",
     "cssnano": "^7.0.6",
     "postcss-nesting": "^13.0.1",
-    "wrangler": "^3.85.0"
+    "wrangler": "^3.99.0"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   }
 }
