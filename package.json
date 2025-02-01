@@ -29,7 +29,7 @@
     "@jgarber/stylelint-config": "^5.0.0",
     "cssnano": "^7.0.6",
     "postcss-nesting": "^13.0.1",
-    "wrangler": "^3.99.0"
+    "wrangler": "^3.107.2"
   },
   "engines": {
     "node": ">=22"
