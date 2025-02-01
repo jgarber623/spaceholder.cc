@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.4.5",
-    "@google-cloud/storage": "^7.14.0",
+    "@google-cloud/storage": "^7.15.0",
     "sharp": "^0.33.5"
   },
   "engines": {
