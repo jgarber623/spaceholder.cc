@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This project has moved to [codeberg.org/jgarber/spaceholder.cc](https://codeberg.org/jgarber/spaceholder.cc).
+
 <img src="https://repository-images.githubusercontent.com/47727289/5a63ef3c-5e9b-4d0d-ae24-fd5ba415b32b" alt="SpaceHolder">
 
 **A space-themed image placeholder service.**
